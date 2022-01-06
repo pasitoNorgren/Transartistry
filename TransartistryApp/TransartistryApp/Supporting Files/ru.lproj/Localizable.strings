@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  TransartistryApp
+
+  Created by Матвей Бойков on 05.01.2022.
+  
+*/
+// MARK: - PhotoPickerModule
+
+"takeAPhoto" = "Сфотографировать";
+"chooseAPhoto" = "Выбрать фото";
+
+// Alert texts
+"errorOccured" = "Возникла ошибка!";
+"fixingError" = "Обнаружена неожиданная ошибка, но мы уже работаем над ее исправлением.";
+"cancel" = "Отменить";

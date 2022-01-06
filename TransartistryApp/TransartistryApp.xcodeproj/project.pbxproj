@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5891903D2782449F00868307 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891903C2782449F00868307 /* PhotoPickerViewController.swift */; };
+		5891903F278244B900868307 /* PhotoPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891903E278244B900868307 /* PhotoPickerInteractor.swift */; };
+		58919041278244CE00868307 /* PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58919040278244CE00868307 /* PhotoPickerPresenter.swift */; };
+		589190432782451D00868307 /* PhotoPickerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190422782451D00868307 /* PhotoPickerModule.swift */; };
+		589190452782453E00868307 /* PhotoPickerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190442782453E00868307 /* PhotoPickerModels.swift */; };
+		589190472782463600868307 /* PhotoPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190462782463600868307 /* PhotoPickerRouter.swift */; };
+		5891904C27836F9100868307 /* PhotoPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891904B27836F9100868307 /* PhotoPickerButton.swift */; };
+		5891904F2783732C00868307 /* PhotoPickerStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891904E2783732C00868307 /* PhotoPickerStackView.swift */; };
+		589190532784BF3D00868307 /* UILabel+TextSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190522784BF3D00868307 /* UILabel+TextSpacing.swift */; };
+		589190582785180900868307 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190572785180900868307 /* String+Localizable.swift */; };
+		5891905A2785189D00868307 /* String+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190592785189D00868307 /* String+Shortcuts.swift */; };
+		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
+		589190602785277800868307 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891905F2785277800868307 /* UIColor+Palette.swift */; };
+		5891906927876CCA00868307 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891906827876CCA00868307 /* AlertManager.swift */; };
+		5891906C2787972900868307 /* UIViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891906B2787972900868307 /* UIViewController+Present.swift */; };
+		5891906F27879B4000868307 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891906E27879B4000868307 /* Thread.swift */; };
+		5891907127879B6000868307 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891907027879B6000868307 /* Closures.swift */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
 		58F34D2F278228B5004D33AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F34D2E278228B5004D33AC /* Assets.xcassets */; };
@@ -42,6 +59,24 @@
 		343ECC07083EE0830FA64F75 /* Pods_TransartistryApp_TransartistryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransartistryApp_TransartistryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F842A5D4C6FA364344079C /* Pods-TransartistryAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.release.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		542B80ABD5BD34796AC4EEC3 /* Pods-TransartistryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5891903C2782449F00868307 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
+		5891903E278244B900868307 /* PhotoPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerInteractor.swift; sourceTree = "<group>"; };
+		58919040278244CE00868307 /* PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPresenter.swift; sourceTree = "<group>"; };
+		589190422782451D00868307 /* PhotoPickerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModule.swift; sourceTree = "<group>"; };
+		589190442782453E00868307 /* PhotoPickerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModels.swift; sourceTree = "<group>"; };
+		589190462782463600868307 /* PhotoPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerRouter.swift; sourceTree = "<group>"; };
+		5891904B27836F9100868307 /* PhotoPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerButton.swift; sourceTree = "<group>"; };
+		5891904E2783732C00868307 /* PhotoPickerStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerStackView.swift; sourceTree = "<group>"; };
+		589190522784BF3D00868307 /* UILabel+TextSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+TextSpacing.swift"; sourceTree = "<group>"; };
+		589190572785180900868307 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		589190592785189D00868307 /* String+Shortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Shortcuts.swift"; sourceTree = "<group>"; };
+		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5891905F2785277800868307 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		5891906827876CCA00868307 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		5891906B2787972900868307 /* UIViewController+Present.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Present.swift"; sourceTree = "<group>"; };
+		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5891906E27879B4000868307 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
+		5891907027879B6000868307 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F34D25278228B3004D33AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F34D27278228B3004D33AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,13 +122,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5891903B2782446E00868307 /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				5891903C2782449F00868307 /* PhotoPickerViewController.swift */,
+				5891903E278244B900868307 /* PhotoPickerInteractor.swift */,
+				58919040278244CE00868307 /* PhotoPickerPresenter.swift */,
+				589190422782451D00868307 /* PhotoPickerModule.swift */,
+				589190442782453E00868307 /* PhotoPickerModels.swift */,
+				589190462782463600868307 /* PhotoPickerRouter.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
+		5891904927836F6700868307 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5891904D2783730F00868307 /* UIStackView */,
+				5891904A27836F6D00868307 /* UIButton */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5891904A27836F6D00868307 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				5891904B27836F9100868307 /* PhotoPickerButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		5891904D2783730F00868307 /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				5891904E2783732C00868307 /* PhotoPickerStackView.swift */,
+			);
+			path = UIStackView;
+			sourceTree = "<group>";
+		};
+		589190502784BEFB00868307 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5891906A2787971300868307 /* UIViewController */,
+				5891905E2785275700868307 /* UIColor */,
+				58919056278517E200868307 /* String */,
+				589190512784BF0600868307 /* UILabel */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		589190512784BF0600868307 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				589190522784BF3D00868307 /* UILabel+TextSpacing.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		58919056278517E200868307 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				589190572785180900868307 /* String+Localizable.swift */,
+				589190592785189D00868307 /* String+Shortcuts.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		5891905E2785275700868307 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				5891905F2785277800868307 /* UIColor+Palette.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		5891906727876CB500868307 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5891906827876CCA00868307 /* AlertManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5891906A2787971300868307 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5891906B2787972900868307 /* UIViewController+Present.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		58C12DD82782367200D9BB12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				58F34D25278228B3004D33AC /* AppDelegate.swift */,
 				58F34D27278228B3004D33AC /* SceneDelegate.swift */,
+				5891906E27879B4000868307 /* Thread.swift */,
+				5891907027879B6000868307 /* Closures.swift */,
 				58F34D30278228B5004D33AC /* LaunchScreen.storyboard */,
 				58F34D33278228B5004D33AC /* Info.plist */,
+				5891905D2785196F00868307 /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -109,6 +237,7 @@
 		58C12DDA2782373000D9BB12 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5891903B2782446E00868307 /* PhotoPicker */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -138,6 +267,9 @@
 		58F34D24278228B3004D33AC /* TransartistryApp */ = {
 			isa = PBXGroup;
 			children = (
+				5891906727876CB500868307 /* Utilities */,
+				589190502784BEFB00868307 /* Extension */,
+				5891904927836F6700868307 /* Views */,
 				58C12DD82782367200D9BB12 /* Supporting Files */,
 				58C12DD9278236A800D9BB12 /* Resources */,
 				58C12DDA2782373000D9BB12 /* Modules */,
@@ -196,6 +328,8 @@
 				58F34D1E278228B2004D33AC /* Sources */,
 				58F34D1F278228B2004D33AC /* Frameworks */,
 				58F34D20278228B2004D33AC /* Resources */,
+				58919048278264B400868307 /* ShellScript */,
+				15D3C9B1900C50AEBF5F4514 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +367,7 @@
 				58F34D3E278228B5004D33AC /* Sources */,
 				58F34D3F278228B5004D33AC /* Frameworks */,
 				58F34D40278228B5004D33AC /* Resources */,
+				B23FF85123D509EB0B06B9A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +409,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 58F34D19278228B2004D33AC;
 			productRefGroup = 58F34D23278228B3004D33AC /* Products */;
@@ -293,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58F34D32278228B5004D33AC /* LaunchScreen.storyboard in Resources */,
+				5891905B2785196F00868307 /* Localizable.strings in Resources */,
 				58F34D2F278228B5004D33AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +471,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15D3C9B1900C50AEBF5F4514 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransartistryApp/Pods-TransartistryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransartistryApp/Pods-TransartistryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransartistryApp/Pods-TransartistryApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		230860B85C4269AEBCF05CA3 /* [CP] Check Pods Manifest.lock */ = {
@@ -380,6 +534,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		58919048278264B400868307 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		B23FF85123D509EB0B06B9A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransartistryApp-TransartistryAppUITests/Pods-TransartistryApp-TransartistryAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransartistryApp-TransartistryAppUITests/Pods-TransartistryApp-TransartistryAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransartistryApp-TransartistryAppUITests/Pods-TransartistryApp-TransartistryAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -387,8 +575,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589190432782451D00868307 /* PhotoPickerModule.swift in Sources */,
+				589190532784BF3D00868307 /* UILabel+TextSpacing.swift in Sources */,
+				5891906C2787972900868307 /* UIViewController+Present.swift in Sources */,
+				5891906927876CCA00868307 /* AlertManager.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
+				5891903F278244B900868307 /* PhotoPickerInteractor.swift in Sources */,
+				589190472782463600868307 /* PhotoPickerRouter.swift in Sources */,
+				5891904C27836F9100868307 /* PhotoPickerButton.swift in Sources */,
+				589190452782453E00868307 /* PhotoPickerModels.swift in Sources */,
+				589190602785277800868307 /* UIColor+Palette.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
+				5891907127879B6000868307 /* Closures.swift in Sources */,
+				5891906F27879B4000868307 /* Thread.swift in Sources */,
+				5891903D2782449F00868307 /* PhotoPickerViewController.swift in Sources */,
+				5891904F2783732C00868307 /* PhotoPickerStackView.swift in Sources */,
+				58919041278244CE00868307 /* PhotoPickerPresenter.swift in Sources */,
+				5891905A2785189D00868307 /* String+Shortcuts.swift in Sources */,
+				589190582785180900868307 /* String+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +629,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5891905D2785196F00868307 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5891905C2785196F00868307 /* en */,
+				5891906D278799DA00868307 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		58F34D30278228B5004D33AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -440,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -501,6 +715,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -563,6 +778,7 @@
 				DEVELOPMENT_TEAM = 6VRN8A2N37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransartistryApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to take a photo directly in the App!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -591,6 +807,7 @@
 				DEVELOPMENT_TEAM = 6VRN8A2N37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransartistryApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to take a photo directly in the App!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -1,0 +1,14 @@
+line_length:
+ - 200 # warning
+ - 250 # error
+disabled_rules:
+- nesting
+- todo
+- trailing_whitespace
+type_name:
+  allowed_symbols: "_"
+identifier_name: 
+  min_length: 2
+excluded:
+- Pods
+- KeychainAccess

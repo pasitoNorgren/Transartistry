@@ -5,6 +5,8 @@ target 'TransartistryApp' do
   use_frameworks!
 
   # Pods for TransartistryApp
+pod 'SwiftLint'
+pod 'SnapKit', '~> 5.0.0'
 
   target 'TransartistryAppTests' do
     inherit! :search_paths
