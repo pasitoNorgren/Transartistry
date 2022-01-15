@@ -7,11 +7,7 @@
 
 import UIKit
 
-protocol PhotoPickerModuleProtocol {
-    func configureModule() -> UIViewController
-}
-
-class PhotoPickerModuleAssembly: PhotoPickerModuleProtocol {
+final class PhotoPickerModuleAssembly: Presentable {
 
     func configureModule() -> UIViewController {
         let viewController = PhotoPickerViewController()
@@ -20,7 +16,6 @@ class PhotoPickerModuleAssembly: PhotoPickerModuleProtocol {
         let router = PhotoPickerRouter()
 
         viewController.interactor = interactor
-        viewController.router = router
 
         interactor.presenter = presenter
         interactor.router = router
@@ -28,6 +23,7 @@ class PhotoPickerModuleAssembly: PhotoPickerModuleProtocol {
         presenter.viewController = viewController
         
         router.dataStore = interactor
+        
         return viewController
     }
 }

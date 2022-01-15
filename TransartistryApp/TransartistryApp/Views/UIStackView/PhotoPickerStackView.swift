@@ -12,7 +12,12 @@ protocol PhotoPickerStackActionDelegate: AnyObject {
     func buttonTapped(to buttonType: PhotoPicker.Model.ButtonType)
 }
 
-class PhotoPickerStackView: UIStackView {
+protocol PhotoPickerStackActionReceiverProtocol: AnyObject {
+    var delegate: PhotoPickerStackActionDelegate? { get set }
+    func displayActivityIndicator(_ decision: Bool)
+}
+
+class PhotoPickerStackView: UIStackView, PhotoPickerStackActionReceiverProtocol {
     
     private enum Constants {
         
@@ -107,6 +112,11 @@ class PhotoPickerStackView: UIStackView {
         return label
     }()
     
+    private let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        return indicator
+    }()
+    
     private let viewForLogoStackView: UIView = UIView()
     private let viewForButtonsStackView: UIView = UIView()
     
@@ -179,7 +189,16 @@ class PhotoPickerStackView: UIStackView {
             buttonStackView.width.equalToSuperview().multipliedBy(Constants.Constraints.buttonStackViewWidthMultiplier)
             buttonStackView.center.equalToSuperview()
         }
+        setupActivityIndicator()
         addButtonsToStackView()
+    }
+    
+    private func setupActivityIndicator() {
+        viewForButtonsStackView.addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints { indicator in
+            indicator.top.equalTo(buttonsStackView.snp.bottom).offset(20)
+            indicator.centerX.equalTo(buttonsStackView)
+        }
     }
     
     private func addButtonsToStackView() {
@@ -190,6 +209,18 @@ class PhotoPickerStackView: UIStackView {
     private func setTargetsForButtons() {
         takePhotoButton.addTarget(nil, action: #selector(takePhotoButtonTapped), for: .touchUpInside)
         cameraRollButton.addTarget(nil, action: #selector(cameraRollButtonTapped), for: .touchUpInside)
+    }
+    
+    private func showActivityIndicator(_ decision: Bool) {
+        if decision {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
+    }
+    
+    func displayActivityIndicator(_ decision: Bool) {
+        showActivityIndicator(decision)
     }
     
     // MARK: - Objc methods

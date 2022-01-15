@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5891903D2782449F00868307 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891903C2782449F00868307 /* PhotoPickerViewController.swift */; };
 		5891903F278244B900868307 /* PhotoPickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891903E278244B900868307 /* PhotoPickerInteractor.swift */; };
 		58919041278244CE00868307 /* PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58919040278244CE00868307 /* PhotoPickerPresenter.swift */; };
 		589190432782451D00868307 /* PhotoPickerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190422782451D00868307 /* PhotoPickerModule.swift */; };
@@ -24,6 +23,15 @@
 		5891906C2787972900868307 /* UIViewController+Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891906B2787972900868307 /* UIViewController+Present.swift */; };
 		5891906F27879B4000868307 /* Thread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891906E27879B4000868307 /* Thread.swift */; };
 		5891907127879B6000868307 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891907027879B6000868307 /* Closures.swift */; };
+		589190742787B2FE00868307 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190732787B2FD00868307 /* EditorViewController.swift */; };
+		589190762787B32000868307 /* EditorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190752787B32000868307 /* EditorInteractor.swift */; };
+		589190782787B33200868307 /* EditorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190772787B33200868307 /* EditorPresenter.swift */; };
+		5891907A2787B34400868307 /* EditorModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190792787B34400868307 /* EditorModule.swift */; };
+		5891907D2787B36400868307 /* EditorModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891907C2787B36400868307 /* EditorModels.swift */; };
+		5891907F2787B37400868307 /* EditorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891907E2787B37400868307 /* EditorRouter.swift */; };
+		589190822787B59500868307 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589190812787B59500868307 /* Protocols.swift */; };
+		58919084278C73E600868307 /* ImageProcessorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58919083278C73E500868307 /* ImageProcessorManager.swift */; };
+		5891908B278CB12A00868307 /* PhotoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5891908A278CB12A00868307 /* PhotoPickerViewController.swift */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
 		58F34D2F278228B5004D33AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F34D2E278228B5004D33AC /* Assets.xcassets */; };
@@ -59,7 +67,6 @@
 		343ECC07083EE0830FA64F75 /* Pods_TransartistryApp_TransartistryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransartistryApp_TransartistryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F842A5D4C6FA364344079C /* Pods-TransartistryAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.release.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		542B80ABD5BD34796AC4EEC3 /* Pods-TransartistryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5891903C2782449F00868307 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
 		5891903E278244B900868307 /* PhotoPickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerInteractor.swift; sourceTree = "<group>"; };
 		58919040278244CE00868307 /* PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPresenter.swift; sourceTree = "<group>"; };
 		589190422782451D00868307 /* PhotoPickerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModule.swift; sourceTree = "<group>"; };
@@ -77,6 +84,15 @@
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906E27879B4000868307 /* Thread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thread.swift; sourceTree = "<group>"; };
 		5891907027879B6000868307 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		589190732787B2FD00868307 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		589190752787B32000868307 /* EditorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorInteractor.swift; sourceTree = "<group>"; };
+		589190772787B33200868307 /* EditorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPresenter.swift; sourceTree = "<group>"; };
+		589190792787B34400868307 /* EditorModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModule.swift; sourceTree = "<group>"; };
+		5891907C2787B36400868307 /* EditorModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModels.swift; sourceTree = "<group>"; };
+		5891907E2787B37400868307 /* EditorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorRouter.swift; sourceTree = "<group>"; };
+		589190812787B59500868307 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		58919083278C73E500868307 /* ImageProcessorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessorManager.swift; sourceTree = "<group>"; };
+		5891908A278CB12A00868307 /* PhotoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewController.swift; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F34D25278228B3004D33AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F34D27278228B3004D33AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +141,7 @@
 		5891903B2782446E00868307 /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				5891903C2782449F00868307 /* PhotoPickerViewController.swift */,
+				5891908A278CB12A00868307 /* PhotoPickerViewController.swift */,
 				5891903E278244B900868307 /* PhotoPickerInteractor.swift */,
 				58919040278244CE00868307 /* PhotoPickerPresenter.swift */,
 				589190422782451D00868307 /* PhotoPickerModule.swift */,
@@ -200,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				5891906827876CCA00868307 /* AlertManager.swift */,
+				58919083278C73E500868307 /* ImageProcessorManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -212,6 +229,19 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		589190722787B2BA00868307 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				589190732787B2FD00868307 /* EditorViewController.swift */,
+				589190752787B32000868307 /* EditorInteractor.swift */,
+				589190772787B33200868307 /* EditorPresenter.swift */,
+				589190792787B34400868307 /* EditorModule.swift */,
+				5891907C2787B36400868307 /* EditorModels.swift */,
+				5891907E2787B37400868307 /* EditorRouter.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
 		58C12DD82782367200D9BB12 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +249,7 @@
 				58F34D27278228B3004D33AC /* SceneDelegate.swift */,
 				5891906E27879B4000868307 /* Thread.swift */,
 				5891907027879B6000868307 /* Closures.swift */,
+				589190812787B59500868307 /* Protocols.swift */,
 				58F34D30278228B5004D33AC /* LaunchScreen.storyboard */,
 				58F34D33278228B5004D33AC /* Info.plist */,
 				5891905D2785196F00868307 /* Localizable.strings */,
@@ -238,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				5891903B2782446E00868307 /* PhotoPicker */,
+				589190722787B2BA00868307 /* Editor */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -577,18 +609,26 @@
 			files = (
 				589190432782451D00868307 /* PhotoPickerModule.swift in Sources */,
 				589190532784BF3D00868307 /* UILabel+TextSpacing.swift in Sources */,
+				5891907D2787B36400868307 /* EditorModels.swift in Sources */,
 				5891906C2787972900868307 /* UIViewController+Present.swift in Sources */,
 				5891906927876CCA00868307 /* AlertManager.swift in Sources */,
+				589190822787B59500868307 /* Protocols.swift in Sources */,
+				5891907F2787B37400868307 /* EditorRouter.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
+				589190782787B33200868307 /* EditorPresenter.swift in Sources */,
+				5891907A2787B34400868307 /* EditorModule.swift in Sources */,
 				5891903F278244B900868307 /* PhotoPickerInteractor.swift in Sources */,
+				5891908B278CB12A00868307 /* PhotoPickerViewController.swift in Sources */,
 				589190472782463600868307 /* PhotoPickerRouter.swift in Sources */,
 				5891904C27836F9100868307 /* PhotoPickerButton.swift in Sources */,
+				589190742787B2FE00868307 /* EditorViewController.swift in Sources */,
 				589190452782453E00868307 /* PhotoPickerModels.swift in Sources */,
 				589190602785277800868307 /* UIColor+Palette.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 				5891907127879B6000868307 /* Closures.swift in Sources */,
+				58919084278C73E600868307 /* ImageProcessorManager.swift in Sources */,
 				5891906F27879B4000868307 /* Thread.swift in Sources */,
-				5891903D2782449F00868307 /* PhotoPickerViewController.swift in Sources */,
+				589190762787B32000868307 /* EditorInteractor.swift in Sources */,
 				5891904F2783732C00868307 /* PhotoPickerStackView.swift in Sources */,
 				58919041278244CE00868307 /* PhotoPickerPresenter.swift in Sources */,
 				5891905A2785189D00868307 /* String+Shortcuts.swift in Sources */,
@@ -779,6 +819,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransartistryApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to take a photo directly in the App!";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please, allow access to take a photo directly in the App!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -808,6 +849,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TransartistryApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please, allow access to take a photo directly in the App!";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please, allow access to take a photo directly in the App!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

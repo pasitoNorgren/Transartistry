@@ -7,20 +7,20 @@
 
 import Foundation
 
-protocol PhotoPickerInteractorProtocol {
+protocol PhotoPickerInteractorProtocol: AnyObject {
     func makeRequest(request: PhotoPicker.Model.RequestType)
 }
 
-protocol PhotoPickerDataStoreProtocol {
-    var takenImage: Data? { get set }
+protocol PhotoPickerDataStoreProtocol: AnyObject {
+    var takenImage: URL? { get set }
 }
 
-class PhotoPickerInteractor: PhotoPickerInteractorProtocol, PhotoPickerDataStoreProtocol {
+final class PhotoPickerInteractor: PhotoPickerInteractorProtocol, PhotoPickerDataStoreProtocol {
     
     var presenter: PhotoPickerPresenterProtocol?
     var router: PhotoPickerRouterProtocol?
     
-    var takenImage: Data?
+    var takenImage: URL?
     
     func makeRequest(request: PhotoPicker.Model.RequestType) {
         switch request {
@@ -28,6 +28,10 @@ class PhotoPickerInteractor: PhotoPickerInteractorProtocol, PhotoPickerDataStore
             takenImage = data
         case .showAlert(let type):
             presenter?.presentAlert(of: type)
+        case .navigateToEditorModule:
+            router?.navigateToEditor()
+        case .shouldShowActivityIndicator(let decision):
+            presenter?.shouldDisplayActivityIndicator(decision: decision)
         }
     }
 }

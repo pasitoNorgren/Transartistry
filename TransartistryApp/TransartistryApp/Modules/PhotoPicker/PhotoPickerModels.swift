@@ -10,8 +10,10 @@ import Foundation
 enum PhotoPicker {
     enum Model {
         enum RequestType {
-            case saveImageDataLocally(data: Data)
+            case saveImageDataLocally(data: URL?)
             case showAlert(type: AlertType)
+            case navigateToEditorModule
+            case shouldShowActivityIndicator(decision: Bool)
         }
         
         enum ButtonType {

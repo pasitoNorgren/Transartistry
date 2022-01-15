@@ -7,26 +7,23 @@
 
 import UIKit
 import SnapKit
-import PhotosUI
 
 protocol PhotoPickerViewControllerProtocol: AnyObject {
     func displayAlert(vc: UIViewController)
+    func displayActivityIndicator(decision: Bool)
 }
 
-class PhotoPickerViewController: UIViewController {
+final class PhotoPickerViewController: UIViewController {
     
     private enum Constants {
         static let viewBackgroundColor: UIColor = UIColor.photoPickerBackgroundColor
-        
-        enum PHPickerController {
-            static let photosSelectionLimit: Int = 1
-        }
     }
     
     var interactor: PhotoPickerInteractorProtocol?
-    var router: PhotoPickerRouterProtocol?
     
-    private let photoPickerStackUI = PhotoPickerStackView()
+    // MARK: - Private properties
+    
+    private let photoPickerStackUI: PhotoPickerStackActionReceiverProtocol = PhotoPickerStackView()
     
     private let takePhotoVC: UIImagePickerController = {
         let picker = UIImagePickerController()
@@ -35,14 +32,14 @@ class PhotoPickerViewController: UIViewController {
         return picker
     }()
     
-    private let cameraRollPickerVC: PHPickerViewController = {
-        var configuration = PHPickerConfiguration(photoLibrary: .shared())
-        configuration.selectionLimit = Constants.PHPickerController.photosSelectionLimit
-        configuration.filter = .images
-        let vc = PHPickerViewController(configuration: configuration)
-        return vc
+    private let cameraRollPickerVC: UIImagePickerController = {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = false
+        return picker
     }()
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCurrentViewController()
@@ -50,13 +47,14 @@ class PhotoPickerViewController: UIViewController {
         setupUI()
     }
     
+    // MARK: - Private methods
     private func configureCurrentViewController() {
         view.backgroundColor = Constants.viewBackgroundColor
     }
     
     private func setupDelegates() {
-        cameraRollPickerVC.delegate = self
         takePhotoVC.delegate = self
+        cameraRollPickerVC.delegate = self
         photoPickerStackUI.delegate = self
     }
     private func setupUI() {
@@ -64,13 +62,16 @@ class PhotoPickerViewController: UIViewController {
     }
     
     private func setupStackView() {
-        view.addSubview(photoPickerStackUI)
-        photoPickerStackUI.snp.makeConstraints { stack in
+        guard let pickerStack = photoPickerStackUI as? UIStackView else {
+            return
+        }
+        view.addSubview(pickerStack)
+        pickerStack.snp.makeConstraints { stack in
             stack.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
     
-    private func passChoosenImageToDataStore(data: Data) {
+    private func passChoosenImageToDataStore(data: URL?) {
         interactor?.makeRequest(request: .saveImageDataLocally(data: data))
     }
     
@@ -84,9 +85,20 @@ class PhotoPickerViewController: UIViewController {
     }
     
     private func presentAlert(of type: AlertType) {
+        shouldShowActivityIndicator(decision: false)
         interactor?.makeRequest(request: .showAlert(type: type))
     }
+    
+    private func navigateToTheNextModule(destination: PhotoPicker.Model.RequestType) {
+        interactor?.makeRequest(request: destination)
+    }
+    
+    private func shouldShowActivityIndicator(decision: Bool) {
+        interactor?.makeRequest(request: .shouldShowActivityIndicator(decision: decision))
+    }
 }
+
+// MARK: - PhotoPickerStackActionDelegate
 
 extension PhotoPickerViewController: PhotoPickerStackActionDelegate {
     func buttonTapped(to buttonType: PhotoPicker.Model.ButtonType) {
@@ -94,56 +106,57 @@ extension PhotoPickerViewController: PhotoPickerStackActionDelegate {
     }
 }
 
+// MARK: - PhotoPickerViewControllerProtocol
+
 extension PhotoPickerViewController: PhotoPickerViewControllerProtocol {
     func displayAlert(vc: UIViewController) {
         present(viewController: vc)
     }
+    
+    func displayActivityIndicator(decision: Bool) {
+        photoPickerStackUI.displayActivityIndicator(decision)
+    }
 }
+
+// MARK: - UIImagePickerControllerDelegate & UINavigationControllerDelegate
 
 extension PhotoPickerViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+        interactor?.makeRequest(request: .shouldShowActivityIndicator(decision: false))
     }
     
     func imagePickerController(
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]
     ) {
-        picker.dismiss(animated: true, completion: nil)
-        
-        guard
-            let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
-            let pngImage = image.pngData()
-        else {
-            presentAlert(of: .defaultAlert)
-            return
-        }
-        passChoosenImageToDataStore(data: pngImage)
-    }
-}
-
-extension PhotoPickerViewController: PHPickerViewControllerDelegate {
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        picker.dismiss(animated: true, completion: nil)
-        
-        results.forEach { result in
-            result.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] reading, error in
-                guard let self = self else {
+        shouldShowActivityIndicator(decision: true)
+        picker.dismiss(animated: true) { [weak self] in
+            
+            guard let self = self else {
+                return
+            }
+            var imageURL: URL?
+            
+            if picker.sourceType == .camera {
+                let imageManager: CameraImageProcesssor = ImageProcessorManager()
+                guard
+                    let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+                    let data = image.pngData()
+                else {
+                    self.presentAlert(of: .defaultAlert)
                     return
                 }
-                
-                asyncOnMainThread {
-                    guard
-                        let image = reading as? UIImage,
-                        let pngImage = image.pngData(),
-                        error == nil
-                    else {
-                        self.presentAlert(of: .defaultAlert)
-                        return
-                    }
-                    self.passChoosenImageToDataStore(data: pngImage)
+                imageURL = imageManager.saveImageAsDataAtTemporaryDirectory(data: data)
+            } else if picker.sourceType == .photoLibrary {
+                guard let urlImage = info[UIImagePickerController.InfoKey.imageURL] as? URL else {
+                    self.presentAlert(of: .defaultAlert)
+                    return
                 }
+                imageURL = urlImage
             }
+            self.passChoosenImageToDataStore(data: imageURL)
+            self.navigateToTheNextModule(destination: .navigateToEditorModule)
         }
     }
 }

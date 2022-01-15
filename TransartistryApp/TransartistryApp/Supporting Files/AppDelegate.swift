@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         self.window = UIWindow()
-        let photoPickerVC: PhotoPickerModuleProtocol = PhotoPickerModuleAssembly()
+        let photoPickerVC: Presentable = PhotoPickerModuleAssembly()
         window?.rootViewController = photoPickerVC.configureModule()
         window?.makeKeyAndVisible()
         return true

@@ -7,16 +7,21 @@
 
 import Foundation
 
-protocol PhotoPickerPresenterProtocol {
+protocol PhotoPickerPresenterProtocol: AnyObject {
     func presentAlert(of type: AlertType)
+    func shouldDisplayActivityIndicator(decision: Bool)
 }
 
-class PhotoPickerPresenter: PhotoPickerPresenterProtocol {
+final class PhotoPickerPresenter: PhotoPickerPresenterProtocol {
     
     weak var viewController: PhotoPickerViewControllerProtocol?
     
     func presentAlert(of type: AlertType) {
         let alertVC = AlertManager.shared.showAlert(type: type)
         viewController?.displayAlert(vc: alertVC)
+    }
+    
+    func shouldDisplayActivityIndicator(decision: Bool) {
+        viewController?.displayActivityIndicator(decision: decision)
     }
 }
