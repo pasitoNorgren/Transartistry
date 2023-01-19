@@ -1,10 +1,3 @@
-//
-//  TransartistryAppUITests.swift
-//  TransartistryAppUITests
-//
-//  Created by Матвей Бойков on 02.01.2022.
-//
-
 import XCTest
 
 class TransartistryAppUITests: XCTestCase {
