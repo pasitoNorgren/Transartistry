@@ -13,7 +13,7 @@ The application will provide several default styles, and will also make it possi
 
 How it will look like: https://www.figma.com/file/AhgWOn3NGv9S1rrAOeggum/TransartistryApp?node-id=0%3A1
 
-Architecture: Clean Swift (VIP). iOS 15.2, XCode 13.2.1
+Stack: UIKit, MVVM + Coordinators, RxSwift. iOS 15.2, XCode 14.0.1
 
 ## Examples of usage
 Before and after painting and implementing style
