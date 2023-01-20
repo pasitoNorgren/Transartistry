@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TransartistryApp
-//
-//  Created by Матвей Бойков on 02.01.2022.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

@@ -1,10 +1,3 @@
-//
-//  TransartistryAppTests.swift
-//  TransartistryAppTests
-//
-//  Created by Матвей Бойков on 02.01.2022.
-//
-
 import XCTest
 @testable import TransartistryApp
 
