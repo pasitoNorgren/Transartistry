@@ -1,0 +1,3 @@
+protocol Bindable {
+    func bindComponents()
+}

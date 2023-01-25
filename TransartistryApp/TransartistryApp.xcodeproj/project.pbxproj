@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		582B64E42980622E004D76EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E32980622E004D76EB /* Bindable.swift */; };
+		582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */; };
+		582B64EB29817DFC004D76EB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EA29817DFC004D76EB /* BaseView.swift */; };
+		582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EC298181C8004D76EB /* BaseViewModel.swift */; };
+		582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EF298181FF004D76EB /* ViewModelConfigurable.swift */; };
+		582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F1298187E9004D76EB /* ViewModelOutlets.swift */; };
+		582B64F429818B03004D76EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F329818B03004D76EB /* BaseViewController.swift */; };
+		582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */; };
+		582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */; };
 		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
@@ -43,6 +52,15 @@
 		343ECC07083EE0830FA64F75 /* Pods_TransartistryApp_TransartistryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransartistryApp_TransartistryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F842A5D4C6FA364344079C /* Pods-TransartistryAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.release.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		542B80ABD5BD34796AC4EEC3 /* Pods-TransartistryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		582B64E32980622E004D76EB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerConfigurable.swift; sourceTree = "<group>"; };
+		582B64EA29817DFC004D76EB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		582B64EC298181C8004D76EB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		582B64EF298181FF004D76EB /* ViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelConfigurable.swift; sourceTree = "<group>"; };
+		582B64F1298187E9004D76EB /* ViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOutlets.swift; sourceTree = "<group>"; };
+		582B64F329818B03004D76EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfigurableViewController.swift; sourceTree = "<group>"; };
+		582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomViewController.swift; sourceTree = "<group>"; };
 		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,18 +108,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		582B64DE29806091004D76EB /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				582B64DF298060AE004D76EB /* Base */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		582B64DF298060AE004D76EB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				582B64F529818B08004D76EB /* BaseViewController */,
+				582B64EE298181D3004D76EB /* BaseViewModel */,
+				582B64E929817DAE004D76EB /* BaseView */,
+				582B64E0298060BB004D76EB /* BaseProtocols */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		582B64E0298060BB004D76EB /* BaseProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				582B64E32980622E004D76EB /* Bindable.swift */,
+				582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */,
+				582B64EF298181FF004D76EB /* ViewModelConfigurable.swift */,
+				582B64F1298187E9004D76EB /* ViewModelOutlets.swift */,
+			);
+			path = BaseProtocols;
+			sourceTree = "<group>";
+		};
+		582B64E929817DAE004D76EB /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				582B64EA29817DFC004D76EB /* BaseView.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		582B64EE298181D3004D76EB /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				582B64EC298181C8004D76EB /* BaseViewModel.swift */,
+			);
+			path = BaseViewModel;
+			sourceTree = "<group>";
+		};
+		582B64F529818B08004D76EB /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				582B64F329818B03004D76EB /* BaseViewController.swift */,
+				582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */,
+				582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
 		589190502784BEFB00868307 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		5891906727876CB500868307 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		58C12DD82782367200D9BB12 /* Supporting Files */ = {
@@ -149,7 +216,7 @@
 		58F34D24278228B3004D33AC /* TransartistryApp */ = {
 			isa = PBXGroup;
 			children = (
-				5891906727876CB500868307 /* Utilities */,
+				582B64DE29806091004D76EB /* BusinessLogic */,
 				589190502784BEFB00868307 /* Extension */,
 				58C12DD82782367200D9BB12 /* Supporting Files */,
 				58C12DD9278236A800D9BB12 /* Resources */,
@@ -455,7 +522,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
+				582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */,
+				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
+				582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */,
+				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
+				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
+				582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */,
+				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
+				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
