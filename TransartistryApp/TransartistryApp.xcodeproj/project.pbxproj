@@ -146,12 +146,12 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		582B64DE29806091004D76EB /* BusinessLogic */ = {
+		582B64DE29806091004D76EB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
 				582B64DF298060AE004D76EB /* Base */,
 			);
-			path = BusinessLogic;
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 		582B64DF298060AE004D76EB /* Base */ = {
@@ -254,7 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				580A3ABE2985752300A8981D /* ApplicationLayer */,
-				582B64DE29806091004D76EB /* BusinessLogic */,
+				582B64DE29806091004D76EB /* PresentationLayer */,
 				589190502784BEFB00868307 /* Extension */,
 				58C12DD82782367200D9BB12 /* Supporting Files */,
 				58C12DD9278236A800D9BB12 /* Resources */,
