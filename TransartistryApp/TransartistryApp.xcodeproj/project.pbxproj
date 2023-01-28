@@ -18,6 +18,7 @@
 		582B64F429818B03004D76EB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F329818B03004D76EB /* BaseViewController.swift */; };
 		582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */; };
 		582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */; };
+		5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C84C29859E780055AD99 /* DisposeBagHolder.swift */; };
 		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
@@ -65,6 +66,7 @@
 		582B64F329818B03004D76EB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfigurableViewController.swift; sourceTree = "<group>"; };
 		582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomViewController.swift; sourceTree = "<group>"; };
+		5848C84C29859E780055AD99 /* DisposeBagHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagHolder.swift; sourceTree = "<group>"; };
 		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */,
 				582B64EF298181FF004D76EB /* ViewModelConfigurable.swift */,
 				582B64F1298187E9004D76EB /* ViewModelOutlets.swift */,
+				5848C84C29859E780055AD99 /* DisposeBagHolder.swift */,
 			);
 			path = BaseProtocols;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
 				580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */,
 				582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */,
+				5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */,
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
