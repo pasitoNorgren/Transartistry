@@ -1,20 +1,33 @@
 PODS:
   - SnapKit (5.0.1)
   - SwiftLint (0.45.0)
+  - TICoordinatorKit (1.1.5)
 
 DEPENDENCIES:
   - SnapKit (~> 5.0.0)
   - SwiftLint
+  - TICoordinatorKit (from `https://github.com/TouchInstinct/TICoordinatorKit.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
     - SnapKit
     - SwiftLint
 
+EXTERNAL SOURCES:
+  TICoordinatorKit:
+    :branch: master
+    :git: https://github.com/TouchInstinct/TICoordinatorKit.git
+
+CHECKOUT OPTIONS:
+  TICoordinatorKit:
+    :commit: c76079e667057f4f9f58327f00c4422138e8669c
+    :git: https://github.com/TouchInstinct/TICoordinatorKit.git
+
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
+  TICoordinatorKit: 7616783e95bb6a1d8d040015841c205269ea0964
 
-PODFILE CHECKSUM: 3ef43580db24e0ba3e69348a831a329f59fecbae
+PODFILE CHECKSUM: 3eb83aa846743ad4cf46d4bdc820a4e63cc237d8
 
 COCOAPODS: 1.11.2
