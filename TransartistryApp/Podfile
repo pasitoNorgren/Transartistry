@@ -7,6 +7,8 @@ target 'TransartistryApp' do
   # Pods for TransartistryApp
 pod 'SwiftLint'
 pod 'SnapKit', '~> 5.0.0'
+pod 'RxSwift', '6.5.0'
+pod 'RxCocoa', '6.5.0'
 pod 'TICoordinatorKit', :git => 'https://github.com/TouchInstinct/TICoordinatorKit.git', :branch => 'master'
 
   target 'TransartistryAppTests' do
