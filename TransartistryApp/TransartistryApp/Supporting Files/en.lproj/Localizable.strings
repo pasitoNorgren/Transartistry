@@ -1,12 +1,7 @@
-/* 
-  Localizable.strings
-  TransartistryApp
+// MARK: - General
+"appName" = "transartistry";
 
-  Created by Матвей Бойков on 05.01.2022.
-  
-*/
-// MARK: - PhotoPickerModule
-
+// MARK: - MainScreenView
 "takeAPhoto" = "Take a photo";
 "chooseAPhoto" = "Choose a photo";
 
