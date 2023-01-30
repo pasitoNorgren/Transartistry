@@ -19,6 +19,12 @@
 		582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */; };
 		582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */; };
 		5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C84C29859E780055AD99 /* DisposeBagHolder.swift */; };
+		5848C8532985A1660055AD99 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C8522985A1660055AD99 /* MainScreenCoordinator.swift */; };
+		5848C85A2985AB0D0055AD99 /* MainScreenModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C8592985AB0D0055AD99 /* MainScreenModuleAssembly.swift */; };
+		5848C85C2985AC980055AD99 /* MainScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C85B2985AC980055AD99 /* MainScreenViewModel.swift */; };
+		5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C85D2985ACDB0055AD99 /* MainScreenViewController.swift */; };
+		5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C85F2985ACE80055AD99 /* MainScreenView.swift */; };
+		5848C8622985AEA60055AD99 /* MainScreenFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C8612985AEA60055AD99 /* MainScreenFlowFactory.swift */; };
 		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
@@ -67,6 +73,12 @@
 		582B64F62981BF4A004D76EB /* BaseConfigurableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfigurableViewController.swift; sourceTree = "<group>"; };
 		582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomViewController.swift; sourceTree = "<group>"; };
 		5848C84C29859E780055AD99 /* DisposeBagHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBagHolder.swift; sourceTree = "<group>"; };
+		5848C8522985A1660055AD99 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		5848C8592985AB0D0055AD99 /* MainScreenModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModuleAssembly.swift; sourceTree = "<group>"; };
+		5848C85B2985AC980055AD99 /* MainScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModel.swift; sourceTree = "<group>"; };
+		5848C85D2985ACDB0055AD99 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		5848C85F2985ACE80055AD99 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		5848C8612985AEA60055AD99 /* MainScreenFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenFlowFactory.swift; sourceTree = "<group>"; };
 		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +163,8 @@
 		582B64DE29806091004D76EB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5848C8542985A2580055AD99 /* Modules */,
+				5848C84E2985A1260055AD99 /* Flows */,
 				582B64DF298060AE004D76EB /* Base */,
 			);
 			path = PresentationLayer;
@@ -203,6 +217,66 @@
 				582B64F82981E1EF004D76EB /* BaseCustomViewController.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		5848C84E2985A1260055AD99 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				5848C8512985A1500055AD99 /* MainScreen */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		5848C8512985A1500055AD99 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5848C8522985A1660055AD99 /* MainScreenCoordinator.swift */,
+				5848C8612985AEA60055AD99 /* MainScreenFlowFactory.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		5848C8542985A2580055AD99 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5848C8552985A2630055AD99 /* MainScreenModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5848C8552985A2630055AD99 /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				5848C8562985A26F0055AD99 /* Assembly */,
+				5848C8582985A27F0055AD99 /* View */,
+				5848C8572985A2790055AD99 /* ViewModel */,
+			);
+			path = MainScreenModule;
+			sourceTree = "<group>";
+		};
+		5848C8562985A26F0055AD99 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				5848C8592985AB0D0055AD99 /* MainScreenModuleAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		5848C8572985A2790055AD99 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5848C85B2985AC980055AD99 /* MainScreenViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5848C8582985A27F0055AD99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5848C85D2985ACDB0055AD99 /* MainScreenViewController.swift */,
+				5848C85F2985ACE80055AD99 /* MainScreenView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		589190502784BEFB00868307 /* Extension */ = {
@@ -565,18 +639,24 @@
 			files = (
 				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
 				582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */,
+				5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */,
 				580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */,
 				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
+				5848C85A2985AB0D0055AD99 /* MainScreenModuleAssembly.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
 				582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */,
+				5848C8532985A1660055AD99 /* MainScreenCoordinator.swift in Sources */,
 				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
 				580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */,
+				5848C85C2985AC980055AD99 /* MainScreenViewModel.swift in Sources */,
 				582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */,
 				5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */,
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
+				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
+				5848C8622985AEA60055AD99 /* MainScreenFlowFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
