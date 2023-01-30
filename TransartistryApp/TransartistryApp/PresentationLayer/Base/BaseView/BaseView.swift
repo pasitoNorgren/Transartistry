@@ -7,11 +7,10 @@ class BaseView: UIView, ViewLayerConfigurable {
 
         initializeViewLayerBaseConfiguration()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        initializeViewLayerBaseConfiguration()
+        fatalError("init(coder:) has not been implemented")
     }
     
     func configureSubviewsAdding() {
