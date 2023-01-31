@@ -5,12 +5,16 @@ final class MainScreenView: BaseView {
     
     private let logoImageView = UIImageView(image: .mainScreenLogo)
     private let appNameLabel = WrapperView<UILabel>(insets: .zero)
-    private let temporaryRouteButtonView = WrapperView<UIButton>(insets: .zero)
+    private let containerView = UIStackView()
+    private let cameraPickerButtonView = WrapperView<UIButton>(insets: .zero)
+    private let photoPickerButtonView = WrapperView<UIButton>(insets: .zero)
     
     override func configureSubviewsAdding() {
         super.configureSubviewsAdding()
         
-        addSubviews(logoImageView, appNameLabel, temporaryRouteButtonView)
+        containerView.addArrangedSubviews(cameraPickerButtonView, photoPickerButtonView)
+        
+        addSubviews(logoImageView, appNameLabel, containerView)
     }
     
     override func configureLayout() {
@@ -29,11 +33,16 @@ final class MainScreenView: BaseView {
             $0.height.equalToSuperview().multipliedBy(Constants.appNameLabelHeightMultiplier)
         }
         
-        temporaryRouteButtonView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(Constants.generalWidthMultiplier)
-            $0.height.equalTo(Constants.defaultButtonHeight48)
+        containerView.snp.makeConstraints {
             $0.bottom.equalTo(safeArea).inset(Constants.inset32)
+            $0.width.equalToSuperview().multipliedBy(Constants.generalWidthMultiplier)
+            $0.centerX.equalToSuperview()
+        }
+        
+        [cameraPickerButtonView, photoPickerButtonView].forEach {
+            $0.snp.makeConstraints {
+                $0.height.equalTo(Constants.defaultButtonHeight48)
+            }
         }
     }
     
@@ -45,11 +54,22 @@ final class MainScreenView: BaseView {
         logoImageView.tintColor = .blackLM
         logoImageView.contentMode = .scaleAspectFit
         
-        temporaryRouteButtonView.wrappedView.backgroundColor = .blackLM
-        temporaryRouteButtonView.wrappedView.layer.cornerRadius = Constants.cornerRadius10
-        temporaryRouteButtonView.wrappedView.titleLabel?.font = .boldFont(of: Constants.routeButtonFont)
-        temporaryRouteButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
-        temporaryRouteButtonView.wrappedView.setTitleColor(.purple, for: .highlighted)
+        containerView.axis = .vertical
+        containerView.spacing = Constants.inset16
+        
+        cameraPickerButtonView.wrappedView.backgroundColor = .whiteLM
+        cameraPickerButtonView.wrappedView.setTitleColor(.blackLM, for: .normal)
+        cameraPickerButtonView.wrappedView.layer.borderColor = UIColor.purple.cgColor
+        cameraPickerButtonView.wrappedView.layer.borderWidth = 1
+        
+        photoPickerButtonView.wrappedView.backgroundColor = .blackLM
+        photoPickerButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
+        
+        [cameraPickerButtonView.wrappedView, photoPickerButtonView.wrappedView].forEach {
+            $0.layer.cornerRadius = Constants.cornerRadius10
+            $0.titleLabel?.font = .boldFont(of: Constants.actionButtonFontSize)
+            $0.setTitleColor(.purple, for: .highlighted)
+        }
     }
     
     override func configureLocalization() {
@@ -57,7 +77,8 @@ final class MainScreenView: BaseView {
         
         appNameLabel.wrappedView.attributedText = .mainScreenAppNameAttributed(string: .appName)
         
-        temporaryRouteButtonView.wrappedView.setTitle(.routeToEditorString, for: .normal)
+        cameraPickerButtonView.wrappedView.setTitle(.cameraPickerButtonTitle, for: .normal)
+        photoPickerButtonView.wrappedView.setTitle(.photoPickerButtonTitle, for: .normal)
     }
 }
 
@@ -65,5 +86,5 @@ private extension Constants {
     static let generalWidthMultiplier: CGFloat = 0.7
     static let logoImageViewHeightMultiplier: CGFloat = 0.5
     static let appNameLabelHeightMultiplier: CGFloat = 0.2
-    static let routeButtonFont: CGFloat = 16
+    static let actionButtonFontSize: CGFloat = 16
 }

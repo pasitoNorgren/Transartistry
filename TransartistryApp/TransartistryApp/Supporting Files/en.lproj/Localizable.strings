@@ -9,6 +9,3 @@
 "errorOccured" = "An error occured!";
 "fixingError" = "An unexpected error has occurred, we are already working to fix it!";
 "cancel" = "Cancel";
-
-// Temporary route button title
-"routeToEditor" = "Route to editor";

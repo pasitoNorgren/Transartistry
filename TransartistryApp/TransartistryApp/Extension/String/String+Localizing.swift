@@ -11,7 +11,11 @@ extension String {
         "appName".localized().uppercased()
     }
     
-    static var routeToEditorString: String {
-        "routeToEditor".localized()
+    static var cameraPickerButtonTitle: String {
+        "takeAPhoto".localized()
+    }
+    
+    static var photoPickerButtonTitle: String {
+        "chooseAPhoto".localized()
     }
 }

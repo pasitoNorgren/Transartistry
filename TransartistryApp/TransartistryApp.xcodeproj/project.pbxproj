@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A3ABF2985754300A8981D /* ApplicationRouter.swift */; };
 		580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A3AC32985758600A8981D /* ApplicationCoordinator.swift */; };
+		5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */; };
 		582B64E42980622E004D76EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E32980622E004D76EB /* Bindable.swift */; };
 		582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */; };
 		582B64EB29817DFC004D76EB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EA29817DFC004D76EB /* BaseView.swift */; };
@@ -75,6 +76,7 @@
 		542B80ABD5BD34796AC4EEC3 /* Pods-TransartistryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TransartistryAppTests/Pods-TransartistryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		580A3ABF2985754300A8981D /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 		580A3AC32985758600A8981D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
 		582B64E32980622E004D76EB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerConfigurable.swift; sourceTree = "<group>"; };
 		582B64EA29817DFC004D76EB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 				58F34D25278228B3004D33AC /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5818BA312989BFE40080F8EB /* UIStackView */ = {
+			isa = PBXGroup;
+			children = (
+				5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */,
+			);
+			path = UIStackView;
 			sourceTree = "<group>";
 		};
 		582B64DE29806091004D76EB /* PresentationLayer */ = {
@@ -375,6 +385,7 @@
 		589190502784BEFB00868307 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5818BA312989BFE40080F8EB /* UIStackView */,
 				5848C8802988843B0055AD99 /* UIColor */,
 				5848C87B298880E10055AD99 /* String */,
 				5848C873298868ED0055AD99 /* NSAttributedString */,
@@ -740,6 +751,7 @@
 				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
 				5848C87D298880FF0055AD99 /* String+Localizing.swift in Sources */,
 				5848C87F2988817B0055AD99 /* String+Shortcuts.swift in Sources */,
+				5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */,
 				5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */,
 				582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */,
 				5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */,
