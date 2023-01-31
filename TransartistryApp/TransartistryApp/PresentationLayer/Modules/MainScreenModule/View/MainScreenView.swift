@@ -17,7 +17,7 @@ final class MainScreenView: BaseView {
         super.configureLayout()
         
         logoImageView.snp.makeConstraints {
-            $0.top.equalTo(safeArea).inset(Constants.logoImageViewTopInset)
+            $0.top.equalTo(safeArea).inset(Constants.inset8)
             $0.centerX.equalToSuperview()
             $0.width.equalToSuperview().multipliedBy(Constants.generalWidthMultiplier)
             $0.height.equalToSuperview().multipliedBy(Constants.logoImageViewHeightMultiplier)
@@ -30,10 +30,10 @@ final class MainScreenView: BaseView {
         }
         
         temporaryRouteButtonView.snp.makeConstraints {
-            $0.top.equalTo(appNameLabel.snp.bottom)
-            $0.bottom.equalToSuperview()
             $0.centerX.equalToSuperview()
             $0.width.equalToSuperview().multipliedBy(Constants.generalWidthMultiplier)
+            $0.height.equalTo(Constants.defaultButtonHeight48)
+            $0.bottom.equalTo(safeArea).inset(Constants.inset32)
         }
     }
     
@@ -44,18 +44,26 @@ final class MainScreenView: BaseView {
         
         logoImageView.tintColor = .blackLM
         logoImageView.contentMode = .scaleAspectFit
+        
+        temporaryRouteButtonView.wrappedView.backgroundColor = .blackLM
+        temporaryRouteButtonView.wrappedView.layer.cornerRadius = Constants.cornerRadius10
+        temporaryRouteButtonView.wrappedView.titleLabel?.font = .boldFont(of: Constants.routeButtonFont)
+        temporaryRouteButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
+        temporaryRouteButtonView.wrappedView.setTitleColor(.purple, for: .highlighted)
     }
     
     override func configureLocalization() {
         super.configureLocalization()
         
         appNameLabel.wrappedView.attributedText = .mainScreenAppNameAttributed(string: .appName)
+        
+        temporaryRouteButtonView.wrappedView.setTitle(.routeToEditorString, for: .normal)
     }
 }
 
-private enum Constants {
+private extension Constants {
     static let generalWidthMultiplier: CGFloat = 0.7
-    static let logoImageViewTopInset: CGFloat = 8
     static let logoImageViewHeightMultiplier: CGFloat = 0.5
     static let appNameLabelHeightMultiplier: CGFloat = 0.2
+    static let routeButtonFont: CGFloat = 16
 }

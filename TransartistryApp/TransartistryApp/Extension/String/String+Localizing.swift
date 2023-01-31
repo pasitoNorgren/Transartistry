@@ -10,4 +10,8 @@ extension String {
     static var appName: String {
         "appName".localized().uppercased()
     }
+    
+    static var routeToEditorString: String {
+        "routeToEditor".localized()
+    }
 }

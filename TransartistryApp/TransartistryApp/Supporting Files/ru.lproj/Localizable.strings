@@ -9,3 +9,6 @@
 "errorOccured" = "Возникла ошибка!";
 "fixingError" = "Обнаружена неожиданная ошибка, но мы уже работаем над ее исправлением.";
 "cancel" = "Отменить";
+
+// Temporary route button title
+"routeToEditor" = "Route to editor";
