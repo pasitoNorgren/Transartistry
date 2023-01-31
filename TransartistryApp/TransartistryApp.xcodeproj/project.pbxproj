@@ -10,6 +10,7 @@
 		580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A3ABF2985754300A8981D /* ApplicationRouter.swift */; };
 		580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A3AC32985758600A8981D /* ApplicationCoordinator.swift */; };
 		5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */; };
+		5818BA362989C6FE0080F8EB /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA352989C6FE0080F8EB /* Closures.swift */; };
 		582B64E42980622E004D76EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E32980622E004D76EB /* Bindable.swift */; };
 		582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */; };
 		582B64EB29817DFC004D76EB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EA29817DFC004D76EB /* BaseView.swift */; };
@@ -77,6 +78,7 @@
 		580A3ABF2985754300A8981D /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
 		580A3AC32985758600A8981D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
+		5818BA352989C6FE0080F8EB /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		582B64E32980622E004D76EB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerConfigurable.swift; sourceTree = "<group>"; };
 		582B64EA29817DFC004D76EB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 				5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */,
 			);
 			path = UIStackView;
+			sourceTree = "<group>";
+		};
+		5818BA342989C6F00080F8EB /* Closures */ = {
+			isa = PBXGroup;
+			children = (
+				5818BA352989C6FE0080F8EB /* Closures.swift */,
+			);
+			path = Closures;
 			sourceTree = "<group>";
 		};
 		582B64DE29806091004D76EB /* PresentationLayer */ = {
@@ -367,6 +377,7 @@
 		5848C883298977770055AD99 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				5818BA342989C6F00080F8EB /* Closures */,
 				5848C886298977EF0055AD99 /* Constants */,
 			);
 			path = Utills;
@@ -779,6 +790,7 @@
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
 				5848C86C29881C430055AD99 /* UIImage+Sources.swift in Sources */,
+				5818BA362989C6FE0080F8EB /* Closures.swift in Sources */,
 				5848C8622985AEA60055AD99 /* MainScreenFlowFactory.swift in Sources */,
 				5848C86929881B3A0055AD99 /* UIView+SubviewsAdding.swift in Sources */,
 			);

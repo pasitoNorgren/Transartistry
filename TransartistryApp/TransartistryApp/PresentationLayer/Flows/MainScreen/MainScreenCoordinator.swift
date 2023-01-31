@@ -17,6 +17,15 @@ final class MainScreenCoordinator: BaseCoordinator {
 
     private func startMainScreenModule() {
         let module = mainScreenFactory.makeMainScreenModule()
+        
+        module.onOpenCamera = {
+            // Open Camera
+        }
+
+        module.onOpenPhotoLibrary = {
+            // Open Photo Library
+        }
+        
         router.push(module)
     }
 }

@@ -1,6 +1,9 @@
 import TICoordinatorKit
 
-protocol MainScreenModule: Presentable {}
+protocol MainScreenModule: Presentable {
+    var onOpenCamera: VoidClosure? { get set }
+    var onOpenPhotoLibrary: VoidClosure? { get set }
+}
 
 enum MainScreenModuleAssembly {
     static func createMainScreenModule() -> MainScreenModule {

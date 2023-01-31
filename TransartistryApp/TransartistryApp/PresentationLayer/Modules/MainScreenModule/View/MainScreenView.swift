@@ -1,13 +1,16 @@
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 final class MainScreenView: BaseView {
     
     private let logoImageView = UIImageView(image: .mainScreenLogo)
     private let appNameLabel = WrapperView<UILabel>(insets: .zero)
     private let containerView = UIStackView()
-    private let cameraPickerButtonView = WrapperView<UIButton>(insets: .zero)
-    private let photoPickerButtonView = WrapperView<UIButton>(insets: .zero)
+    
+    fileprivate let cameraPickerButtonView = WrapperView<UIButton>(insets: .zero)
+    fileprivate let photoPickerButtonView = WrapperView<UIButton>(insets: .zero)
     
     override func configureSubviewsAdding() {
         super.configureSubviewsAdding()
@@ -87,4 +90,14 @@ private extension Constants {
     static let logoImageViewHeightMultiplier: CGFloat = 0.5
     static let appNameLabelHeightMultiplier: CGFloat = 0.2
     static let actionButtonFontSize: CGFloat = 16
+}
+
+extension Reactive where Base: MainScreenView {
+    var cameraPickerButtonTap: ControlEvent<Void> {
+        base.cameraPickerButtonView.wrappedView.rx.tap
+    }
+    
+    var photoPickerButtonTap: ControlEvent<Void> {
+        base.photoPickerButtonView.wrappedView.rx.tap
+    }
 }
