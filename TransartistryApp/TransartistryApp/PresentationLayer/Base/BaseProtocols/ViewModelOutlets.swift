@@ -1,1 +1,1 @@
-protocol ViewModelOutlets {}
+protocol ViewModelOutlets: AnyObject {}

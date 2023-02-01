@@ -8,5 +8,12 @@ class ApplicationCoordinator: BaseCoordinator {
         self.router = router
     }
 
-    override func start() {}
+    override func start() {
+        startMainScreenFlow()
+    }
+
+    private func startMainScreenFlow() {
+        let coordinator = MainScreenCoordinator(router: router.setupRootRouter())
+        bindTo(coordinator).start()
+    }
 }
