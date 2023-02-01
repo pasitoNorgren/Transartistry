@@ -11,6 +11,7 @@
 		580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580A3AC32985758600A8981D /* ApplicationCoordinator.swift */; };
 		5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */; };
 		5818BA362989C6FE0080F8EB /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA352989C6FE0080F8EB /* Closures.swift */; };
+		5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */; };
 		582B64E42980622E004D76EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E32980622E004D76EB /* Bindable.swift */; };
 		582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */; };
 		582B64EB29817DFC004D76EB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EA29817DFC004D76EB /* BaseView.swift */; };
@@ -79,6 +80,7 @@
 		580A3AC32985758600A8981D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
 		5818BA352989C6FE0080F8EB /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelOutlets.swift; sourceTree = "<group>"; };
 		582B64E32980622E004D76EB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerConfigurable.swift; sourceTree = "<group>"; };
 		582B64EA29817DFC004D76EB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				5848C85B2985AC980055AD99 /* MainScreenViewModel.swift */,
+				5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
+				5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */,
 				5848C86C29881C430055AD99 /* UIImage+Sources.swift in Sources */,
 				5818BA362989C6FE0080F8EB /* Closures.swift in Sources */,
 				5848C8622985AEA60055AD99 /* MainScreenFlowFactory.swift in Sources */,
