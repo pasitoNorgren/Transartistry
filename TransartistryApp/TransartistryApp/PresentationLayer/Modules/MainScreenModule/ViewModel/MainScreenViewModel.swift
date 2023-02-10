@@ -7,7 +7,6 @@ final class MainScreenViewModel: BaseViewModel,
                                  MainScreenViewModelOutlets {
     
     private let cameraPickerRelay = PublishRelay<PhotoDistributor>()
-    private let photoPickerRelay = PublishRelay<Void>()
     
     private let cameraActivityRelay = PublishRelay<Void>()
     
@@ -23,16 +22,8 @@ final class MainScreenViewModel: BaseViewModel,
         cameraPickerRelay.asDriver(onErrorDriveWith: .never())
     }
     
-    var photoPickerDriver: Driver<Void> {
-        photoPickerRelay.asDriver(onErrorDriveWith: .never())
-    }
-    
     func cameraPickerButtonTapped() {
         cameraActivityRelay.accept(())
-    }
-    
-    func photoPickerButtonTapped() {
-        photoPickerRelay.accept(())
     }
     
     override func bindComponents() {

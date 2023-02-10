@@ -22,10 +22,6 @@ final class MainScreenCoordinator: BaseCoordinator {
             self?.startCameraPickerModule(distributor: $0)
         }
         
-        module.onOpenPhotoLibrary = {
-            // Open Photo Library
-        }
-        
         router.push(module)
     }
     

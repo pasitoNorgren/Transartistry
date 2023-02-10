@@ -10,12 +10,12 @@ final class MainScreenView: BaseView {
     private let containerView = UIStackView()
     
     fileprivate let cameraPickerButtonView = WrapperView<UIButton>(insets: .zero)
-    fileprivate let photoPickerButtonView = WrapperView<UIButton>(insets: .zero)
+    fileprivate let imagePickerButtonView = WrapperView<UIButton>(insets: .zero)
     
     override func configureSubviewsAdding() {
         super.configureSubviewsAdding()
         
-        containerView.addArrangedSubviews(cameraPickerButtonView, photoPickerButtonView)
+        containerView.addArrangedSubviews(cameraPickerButtonView, imagePickerButtonView)
         
         addSubviews(logoImageView, appNameLabel, containerView)
     }
@@ -42,7 +42,7 @@ final class MainScreenView: BaseView {
             $0.centerX.equalToSuperview()
         }
         
-        [cameraPickerButtonView, photoPickerButtonView].forEach {
+        [cameraPickerButtonView, imagePickerButtonView].forEach {
             $0.snp.makeConstraints {
                 $0.height.equalTo(Constants.defaultButtonHeight48)
             }
@@ -65,10 +65,10 @@ final class MainScreenView: BaseView {
         cameraPickerButtonView.wrappedView.layer.borderColor = UIColor.purple.cgColor
         cameraPickerButtonView.wrappedView.layer.borderWidth = 1
         
-        photoPickerButtonView.wrappedView.backgroundColor = .blackLM
-        photoPickerButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
+        imagePickerButtonView.wrappedView.backgroundColor = .blackLM
+        imagePickerButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
         
-        [cameraPickerButtonView.wrappedView, photoPickerButtonView.wrappedView].forEach {
+        [cameraPickerButtonView.wrappedView, imagePickerButtonView.wrappedView].forEach {
             $0.layer.cornerRadius = Constants.cornerRadius10
             $0.titleLabel?.font = .boldFont(of: Constants.actionButtonFontSize)
             $0.setTitleColor(.purple, for: .highlighted)
@@ -81,7 +81,7 @@ final class MainScreenView: BaseView {
         appNameLabel.wrappedView.attributedText = .mainScreenAppNameAttributed(string: .appName)
         
         cameraPickerButtonView.wrappedView.setTitle(.cameraPickerButtonTitle, for: .normal)
-        photoPickerButtonView.wrappedView.setTitle(.photoPickerButtonTitle, for: .normal)
+        imagePickerButtonView.wrappedView.setTitle(.imagePickerButtonTitle, for: .normal)
     }
 }
 
@@ -97,7 +97,7 @@ extension Reactive where Base: MainScreenView {
         base.cameraPickerButtonView.wrappedView.rx.tap
     }
     
-    var photoPickerButtonTap: ControlEvent<Void> {
-        base.photoPickerButtonView.wrappedView.rx.tap
+    var imagePickerButtonTap: ControlEvent<Void> {
+        base.imagePickerButtonView.wrappedView.rx.tap
     }
 }

@@ -15,7 +15,7 @@ extension String {
         "takeAPhoto".localized()
     }
     
-    static var photoPickerButtonTitle: String {
+    static var imagePickerButtonTitle: String {
         "chooseAPhoto".localized()
     }
 }
