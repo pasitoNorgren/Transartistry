@@ -1,6 +1,6 @@
 import UIKit
 
-final class CameraPickerController: UIImagePickerController, CameraPickerModule {
+final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
     
     // MARK: - CameraPickerModule
     
@@ -22,7 +22,7 @@ final class CameraPickerController: UIImagePickerController, CameraPickerModule 
     }
 }
 
-extension CameraPickerController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+extension PhotoPickerController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         closeModule()
     }

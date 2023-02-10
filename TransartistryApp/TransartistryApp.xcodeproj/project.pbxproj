@@ -12,9 +12,9 @@
 		5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */; };
 		5818BA362989C6FE0080F8EB /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA352989C6FE0080F8EB /* Closures.swift */; };
 		5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */; };
-		5818BA3D298B04110080F8EB /* CameraPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA3C298B04110080F8EB /* CameraPickerController.swift */; };
-		5818BA3F298B04240080F8EB /* CameraPickerModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA3E298B04240080F8EB /* CameraPickerModuleAssembly.swift */; };
-		5818BA42298B044A0080F8EB /* CameraPickerFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA41298B044A0080F8EB /* CameraPickerFlowFactory.swift */; };
+		5818BA3D298B04110080F8EB /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA3C298B04110080F8EB /* PhotoPickerController.swift */; };
+		5818BA3F298B04240080F8EB /* PhotoPickerModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA3E298B04240080F8EB /* PhotoPickerModuleAssembly.swift */; };
+		5818BA42298B044A0080F8EB /* PhotoPickerFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA41298B044A0080F8EB /* PhotoPickerFlowFactory.swift */; };
 		5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA43298BE6E20080F8EB /* BaseModule.swift */; };
 		582B64E42980622E004D76EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E32980622E004D76EB /* Bindable.swift */; };
 		582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */; };
@@ -88,9 +88,9 @@
 		5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
 		5818BA352989C6FE0080F8EB /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelOutlets.swift; sourceTree = "<group>"; };
-		5818BA3C298B04110080F8EB /* CameraPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerController.swift; sourceTree = "<group>"; };
-		5818BA3E298B04240080F8EB /* CameraPickerModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerModuleAssembly.swift; sourceTree = "<group>"; };
-		5818BA41298B044A0080F8EB /* CameraPickerFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPickerFlowFactory.swift; sourceTree = "<group>"; };
+		5818BA3C298B04110080F8EB /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
+		5818BA3E298B04240080F8EB /* PhotoPickerModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModuleAssembly.swift; sourceTree = "<group>"; };
+		5818BA41298B044A0080F8EB /* PhotoPickerFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerFlowFactory.swift; sourceTree = "<group>"; };
 		5818BA43298BE6E20080F8EB /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		582B64E32980622E004D76EB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerConfigurable.swift; sourceTree = "<group>"; };
@@ -220,19 +220,19 @@
 			path = Closures;
 			sourceTree = "<group>";
 		};
-		5818BA39298B039B0080F8EB /* CameraPickerModule */ = {
+		5818BA39298B039B0080F8EB /* PhotoPickerModule */ = {
 			isa = PBXGroup;
 			children = (
 				5818BA3A298B03F80080F8EB /* Assembly */,
 				5818BA3B298B04000080F8EB /* View */,
 			);
-			path = CameraPickerModule;
+			path = PhotoPickerModule;
 			sourceTree = "<group>";
 		};
 		5818BA3A298B03F80080F8EB /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				5818BA3E298B04240080F8EB /* CameraPickerModuleAssembly.swift */,
+				5818BA3E298B04240080F8EB /* PhotoPickerModuleAssembly.swift */,
 			);
 			path = Assembly;
 			sourceTree = "<group>";
@@ -240,17 +240,17 @@
 		5818BA3B298B04000080F8EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5818BA3C298B04110080F8EB /* CameraPickerController.swift */,
+				5818BA3C298B04110080F8EB /* PhotoPickerController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5818BA40298B042E0080F8EB /* CameraPicker */ = {
+		5818BA40298B042E0080F8EB /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				5818BA41298B044A0080F8EB /* CameraPickerFlowFactory.swift */,
+				5818BA41298B044A0080F8EB /* PhotoPickerFlowFactory.swift */,
 			);
-			path = CameraPicker;
+			path = PhotoPicker;
 			sourceTree = "<group>";
 		};
 		582B64DE29806091004D76EB /* PresentationLayer */ = {
@@ -317,7 +317,7 @@
 		5848C84E2985A1260055AD99 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				5818BA40298B042E0080F8EB /* CameraPicker */,
+				5818BA40298B042E0080F8EB /* PhotoPicker */,
 				5848C8512985A1500055AD99 /* MainScreen */,
 			);
 			path = Flows;
@@ -336,7 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				5848C8552985A2630055AD99 /* MainScreenModule */,
-				5818BA39298B039B0080F8EB /* CameraPickerModule */,
+				5818BA39298B039B0080F8EB /* PhotoPickerModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -841,7 +841,7 @@
 			files = (
 				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
 				5848C87D298880FF0055AD99 /* String+Localizing.swift in Sources */,
-				5818BA3F298B04240080F8EB /* CameraPickerModuleAssembly.swift in Sources */,
+				5818BA3F298B04240080F8EB /* PhotoPickerModuleAssembly.swift in Sources */,
 				5848C87F2988817B0055AD99 /* String+Shortcuts.swift in Sources */,
 				5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */,
 				5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */,
@@ -849,7 +849,7 @@
 				5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */,
 				5848C88A298979470055AD99 /* Constants+Heights.swift in Sources */,
 				58AAD965299564840072B764 /* Photo.swift in Sources */,
-				5818BA42298B044A0080F8EB /* CameraPickerFlowFactory.swift in Sources */,
+				5818BA42298B044A0080F8EB /* PhotoPickerFlowFactory.swift in Sources */,
 				5848C885298977B40055AD99 /* Constants+BasicInsets.swift in Sources */,
 				580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */,
 				5848C86E29883EF70055AD99 /* UIView+SafeArea.swift in Sources */,
@@ -861,7 +861,7 @@
 				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
 				58AAD967299598790072B764 /* UIImage+Data.swift in Sources */,
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
-				5818BA3D298B04110080F8EB /* CameraPickerController.swift in Sources */,
+				5818BA3D298B04110080F8EB /* PhotoPickerController.swift in Sources */,
 				580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */,
 				5848C85C2985AC980055AD99 /* MainScreenViewModel.swift in Sources */,
 				5848C864298816350055AD99 /* WrapperView.swift in Sources */,

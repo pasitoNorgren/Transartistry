@@ -30,7 +30,7 @@ final class MainScreenCoordinator: BaseCoordinator {
     }
     
     private func startCameraPickerModule(distributor: PhotoDistributor) {
-        let module = mainScreenFactory.makeCameraPickerModule()
+        let module = mainScreenFactory.makePhotoPickerModule()
         
         module.onClose = { [weak router] in
             router?.dismissModule()
