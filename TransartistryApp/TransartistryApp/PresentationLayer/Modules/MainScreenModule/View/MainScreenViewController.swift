@@ -4,10 +4,12 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
                                                                       DisposeBagHolder,
                                                                       MainScreenModule {
     // MARK: - DisposeBagHolder
+    
     var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - MainScreenModule
-    var onOpenCamera: VoidClosure?
+    
+    var onOpenCamera: ParameterClosure<PhotoDistributor>?
     var onOpenPhotoLibrary: VoidClosure?
     
     override func configureAppearance() {
@@ -37,8 +39,8 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
         
         viewModel
             .cameraPickerDriver
-            .drive(with: self, onNext: { owner, _ in
-                owner.onOpenCamera?()
+            .drive(with: self, onNext: { owner, distributor in
+                owner.onOpenCamera?(distributor)
             })
             .disposed(by: disposeBag)
         
