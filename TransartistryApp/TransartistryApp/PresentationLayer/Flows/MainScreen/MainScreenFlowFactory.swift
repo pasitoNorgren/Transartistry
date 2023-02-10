@@ -1,4 +1,4 @@
-protocol MainScreenModulesFactory {
+protocol MainScreenModulesFactory: CameraPickerModuleFactory {
     func makeMainScreenModule() -> MainScreenModule
 }
 
