@@ -34,7 +34,7 @@ final class MainScreenCoordinator: BaseCoordinator {
         }
         
         module.onPhotoPicked = { [weak distributor = parameters.distributor] photo in
-            distributor?.publish(photo: photo)
+            distributor?.publish(item: photo)
         }
         
         router.present(module)

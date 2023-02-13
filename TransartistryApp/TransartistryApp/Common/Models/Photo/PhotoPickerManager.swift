@@ -39,7 +39,6 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
     }
     
     private func openPhotoPicker(source: PhotoPickerSource) {
-        photoDisctributor.reset()
         photoPickerRelay.accept((photoDisctributor, source))
     }
 }
