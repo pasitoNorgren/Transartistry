@@ -6,11 +6,7 @@ final class MainScreenViewModel: BaseViewModel,
                                  DisposeBagHolder,
                                  MainScreenViewModelOutlets {
     
-    private let cameraPickerRelay = PublishRelay<PhotoDistributor>()
-    
-    private let cameraActivityRelay = PublishRelay<Void>()
-    
-    private let photoDistributor = PhotoDistributor()
+    private let photoPickerManager: PhotoPicking = PhotoPickerManager()
     
     // MARK: - DisposeBagHolder
     
@@ -18,26 +14,11 @@ final class MainScreenViewModel: BaseViewModel,
     
     // MARK: - MainScreenViewModelOutlets
     
-    var cameraPickerDriver: Driver<PhotoDistributor> {
-        cameraPickerRelay.asDriver(onErrorDriveWith: .never())
+    var photoPickerOpenerDriver: Driver<PhotoPickerParameters> {
+        photoPickerManager.photoPickerOpenerDriver
     }
     
-    func cameraPickerButtonTapped() {
-        cameraActivityRelay.accept(())
-    }
-    
-    override func bindComponents() {
-        super.bindComponents()
-        
-        cameraActivityRelay.asObservable()
-            .subscribe(with: self, onNext: { owner, _ in
-                owner.openCameraPicker()
-            })
-            .disposed(by: disposeBag)
-    }
-    
-    private func openCameraPicker() {
-        photoDistributor.reset()
-        cameraPickerRelay.accept(photoDistributor)
+    func pickPhoto(with source: PhotoPickerSource) {
+        photoPickerManager.pickPhoto(with: source)
     }
 }

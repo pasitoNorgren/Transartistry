@@ -2,7 +2,7 @@ import UIKit
 
 final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
     
-    // MARK: - CameraPickerModule
+    // MARK: - PhotoPickerModule
     
     var onClose: VoidClosure?
     var onPhotoPicked: ParameterClosure<Photo>?
@@ -31,7 +31,7 @@ extension PhotoPickerController: UIImagePickerControllerDelegate & UINavigationC
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         closeModule()
         
-        guard picker.sourceType == .camera else {
+        guard picker.sourceType == .camera || picker.sourceType == .photoLibrary else {
             didFinishPicking(image: nil)
             return
         }

@@ -1,9 +1,11 @@
 protocol PhotoPickerModuleFactory {
-    func makePhotoPickerModule() -> PhotoPickerModule
+    func makePhotoPickerModule(with source: PhotoPickerSource) -> PhotoPickerModule
 }
 
 extension PhotoPickerModuleFactory {
-    func makePhotoPickerModule() -> PhotoPickerModule {
-        PhotoPickerModuleAssembly.createPhotoPickerModule()
+    func makePhotoPickerModule(with source: PhotoPickerSource) -> PhotoPickerModule {
+        source == .camera
+            ? PhotoPickerModuleAssembly.createCameraPickerModule()
+            : PhotoPickerModuleAssembly.createLibraryImagePickerModule()
     }
 }

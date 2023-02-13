@@ -18,21 +18,22 @@ final class MainScreenCoordinator: BaseCoordinator {
     private func startMainScreenModule() {
         let module = mainScreenFactory.makeMainScreenModule()
         
-        module.onOpenCamera = { [weak self] in
-            self?.startCameraPickerModule(distributor: $0)
+        module.onOpenPhotoPicker = { [weak self] in
+            self?.startPhotoPickerModule(with: $0)
         }
         
         router.push(module)
     }
     
-    private func startCameraPickerModule(distributor: PhotoDistributor) {
-        let module = mainScreenFactory.makePhotoPickerModule()
+    private func startPhotoPickerModule(with parameters: PhotoPickerParameters) {
+        
+        let module = mainScreenFactory.makePhotoPickerModule(with: parameters.source)
         
         module.onClose = { [weak router] in
             router?.dismissModule()
         }
         
-        module.onPhotoPicked = { [weak distributor] photo in
+        module.onPhotoPicked = { [weak distributor = parameters.distributor] photo in
             distributor?.publish(photo: photo)
         }
         

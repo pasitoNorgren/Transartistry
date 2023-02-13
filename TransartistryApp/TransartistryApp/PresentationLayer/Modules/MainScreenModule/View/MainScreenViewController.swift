@@ -9,7 +9,7 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
     
     // MARK: - MainScreenModule
     
-    var onOpenCamera: ParameterClosure<PhotoDistributor>?
+    var onOpenPhotoPicker: ParameterClosure<PhotoPickerParameters>?
     
     override func configureAppearance() {
         super.configureAppearance()
@@ -24,7 +24,7 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
             .asObservable()
             .throttle(.seconds(2), scheduler: MainScheduler.instance)
             .subscribe(with: viewModel, onNext: { owner, _ in
-                owner.cameraPickerButtonTapped()
+                owner.pickPhoto(with: .camera)
             })
             .disposed(by: disposeBag)
         
@@ -32,14 +32,13 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
             .asObservable()
             .throttle(.seconds(2), scheduler: MainScheduler.instance)
             .subscribe(with: viewModel, onNext: { owner, _ in
-                // handle later
+                owner.pickPhoto(with: .imageLibrary)
             })
             .disposed(by: disposeBag)
         
-        viewModel
-            .cameraPickerDriver
-            .drive(with: self, onNext: { owner, distributor in
-                owner.onOpenCamera?(distributor)
+        viewModel.photoPickerOpenerDriver
+            .drive(with: self, onNext: { owner, parameters in
+                owner.onOpenPhotoPicker?(parameters)
             })
             .disposed(by: disposeBag)
     }

@@ -4,10 +4,15 @@ protocol PhotoPickerModule: BaseModule {
 
 enum PhotoPickerModuleAssembly {
     
-    static func createPhotoPickerModule() -> PhotoPickerModule {
+    static func createCameraPickerModule() -> PhotoPickerModule {
         let view = PhotoPickerController()
         view.sourceType = .camera
-        view.allowsEditing = false
+        return view
+    }
+    
+    static func createLibraryImagePickerModule() -> PhotoPickerModule {
+        let view = PhotoPickerController()
+        view.sourceType = .photoLibrary
         return view
     }
 }
