@@ -3,7 +3,7 @@ import RxCocoa
 
 class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
     
-    private let photoDisctributor = PhotoDistributor()
+    private let photoDistributor = PhotoDistributor()
     
     private let activityRelay = PublishRelay<PhotoPickerSource>()
     
@@ -39,6 +39,6 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
     }
     
     private func openPhotoPicker(source: PhotoPickerSource) {
-        photoPickerRelay.accept((photoDisctributor, source))
+        photoPickerRelay.accept((photoDistributor, source))
     }
 }

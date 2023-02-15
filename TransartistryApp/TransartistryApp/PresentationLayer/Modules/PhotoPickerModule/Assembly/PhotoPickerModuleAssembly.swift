@@ -1,5 +1,5 @@
 protocol PhotoPickerModule: BaseModule {
-    var onPhotoPicked: ParameterClosure<Photo>? { get set }
+    var onPhotoPicked: ParameterClosure<PhotoResult>? { get set }
 }
 
 enum PhotoPickerModuleAssembly {

@@ -5,7 +5,7 @@ final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
     // MARK: - PhotoPickerModule
     
     var onClose: VoidClosure?
-    var onPhotoPicked: ParameterClosure<Photo>?
+    var onPhotoPicked: ParameterClosure<PhotoResult>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,23 @@ final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
     }
     
     private func didFinishPicking(image: UIImage?) {
-        onPhotoPicked?(Photo(image: image))
+        guard let image = image else {
+            handlePickingResult(with: .failure(.extracting))
+            return
+        }
+        
+        do {
+            let originalImage = try Photo(image: image)
+            handlePickingResult(with: .success(originalImage))
+        } catch let error as PhotoPickingError {
+            handlePickingResult(with: .failure(error))
+        } catch {
+            handlePickingResult(with: .failure(.unexpected))
+        }
+    }
+    
+    private func handlePickingResult(with result: PhotoResult) {
+        onPhotoPicked?(result)
     }
 }
 
