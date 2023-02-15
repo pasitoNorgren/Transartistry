@@ -51,6 +51,7 @@
 		58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A15299A877800755611 /* PhotoPickerManager.swift */; };
 		58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */; };
 		58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7A358299A9FAE0004BB74 /* Distributor.swift */; };
+		58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8667C299D3D9D00591CCE /* UIColor+Random.swift */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
 		58F34D2F278228B5004D33AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F34D2E278228B5004D33AC /* Assets.xcassets */; };
@@ -131,6 +132,7 @@
 		58AE4A15299A877800755611 /* PhotoPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManager.swift; sourceTree = "<group>"; };
 		58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerParameters.swift; sourceTree = "<group>"; };
 		58D7A358299A9FAE0004BB74 /* Distributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distributor.swift; sourceTree = "<group>"; };
+		58E8667C299D3D9D00591CCE /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F34D25278228B3004D33AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F34D27278228B3004D33AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				5848C881298884510055AD99 /* UIColor+Palette.swift */,
+				58E8667C299D3D9D00591CCE /* UIColor+Random.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -890,6 +893,7 @@
 				58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */,
 				5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */,
 				58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */,
+				58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */,
 				5848C882298884510055AD99 /* UIColor+Palette.swift in Sources */,
 				5848C872298867860055AD99 /* UIFont+Weights.swift in Sources */,
 				5848C875298869090055AD99 /* NSAttributedString+Extension.swift in Sources */,

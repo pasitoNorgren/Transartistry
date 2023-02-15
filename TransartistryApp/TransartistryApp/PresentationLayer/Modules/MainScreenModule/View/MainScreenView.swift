@@ -54,7 +54,7 @@ final class MainScreenView: BaseView {
         
         backgroundColor = .whiteLM
         
-        logoImageView.tintColor = .blackLM
+        logoImageView.tintColor = Constants.logoImageViewTintColor
         logoImageView.contentMode = .scaleAspectFit
         
         containerView.axis = .vertical
@@ -90,6 +90,8 @@ private extension Constants {
     static let logoImageViewHeightMultiplier: CGFloat = 0.5
     static let appNameLabelHeightMultiplier: CGFloat = 0.2
     static let actionButtonFontSize: CGFloat = 16
+    
+    static let logoImageViewTintColor: UIColor = .blackLM
 }
 
 extension Reactive where Base: MainScreenView {
@@ -99,5 +101,26 @@ extension Reactive where Base: MainScreenView {
     
     var imagePickerButtonTap: ControlEvent<Void> {
         base.imagePickerButtonView.wrappedView.rx.tap
+    }
+}
+
+extension MainScreenView {
+    
+    func animate(with shouldStartAnimation: Bool) {
+        shouldStartAnimation
+            ? startAnimation()
+            : stopAnimation()
+    }
+    
+    private func startAnimation() {
+        UIView.animate(withDuration: 1, delay: .zero, options: [.autoreverse, .repeat, .curveEaseIn]) { [weak self] in
+            self?.logoImageView.tintColor = .random()
+        }
+    }
+    
+    private func stopAnimation() {
+        UIView.animate(withDuration: 1, delay: .zero, options: [.beginFromCurrentState]) { [weak self] in
+            self?.logoImageView.tintColor = Constants.logoImageViewTintColor
+        }
     }
 }
