@@ -41,5 +41,16 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
                 owner.onOpenPhotoPicker?(parameters)
             })
             .disposed(by: disposeBag)
+        
+        // logo image view animation activity
+        viewModel.indicatingActivityDriver
+            .drive(customView.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        // camera/photo library buttons are isEnabled or not
+        viewModel.indicatingActivityDriver
+            .map { !$0 }
+            .drive(customView.rx.isButtonInteractionEnabled)
+            .disposed(by: disposeBag)
     }
 }

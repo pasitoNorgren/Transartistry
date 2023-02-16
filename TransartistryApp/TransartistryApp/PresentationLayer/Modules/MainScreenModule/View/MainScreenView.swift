@@ -72,6 +72,7 @@ final class MainScreenView: BaseView {
             $0.layer.cornerRadius = Constants.cornerRadius10
             $0.titleLabel?.font = .boldFont(of: Constants.actionButtonFontSize)
             $0.setTitleColor(.purple, for: .highlighted)
+            $0.setTitleColor(.gray, for: .disabled)
         }
     }
     
@@ -82,6 +83,11 @@ final class MainScreenView: BaseView {
         
         cameraPickerButtonView.wrappedView.setTitle(.cameraPickerButtonTitle, for: .normal)
         imagePickerButtonView.wrappedView.setTitle(.imagePickerButtonTitle, for: .normal)
+    }
+    
+    fileprivate func configureButtonsAvailability(with isEnabled: Bool) {
+        cameraPickerButtonView.wrappedView.isEnabled = isEnabled
+        imagePickerButtonView.wrappedView.isEnabled = isEnabled
     }
 }
 
@@ -102,7 +108,21 @@ extension Reactive where Base: MainScreenView {
     var imagePickerButtonTap: ControlEvent<Void> {
         base.imagePickerButtonView.wrappedView.rx.tap
     }
+    
+    var isAnimating: Binder<Bool> {
+        Binder(self.base) { base, shouldStartAnimation in
+            base.animate(with: shouldStartAnimation)
+        }
+    }
+    
+    var isButtonInteractionEnabled: Binder<Bool> {
+        Binder(self.base) { base, isEnabled in
+            base.configureButtonsAvailability(with: isEnabled)
+        }
+    }
 }
+
+// MARK: - Animation
 
 extension MainScreenView {
     

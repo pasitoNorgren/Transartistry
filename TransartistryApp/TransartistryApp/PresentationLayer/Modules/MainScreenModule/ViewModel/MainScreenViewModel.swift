@@ -18,6 +18,10 @@ final class MainScreenViewModel: BaseViewModel,
         photoPickerManager.photoPickerOpenerDriver
     }
     
+    var indicatingActivityDriver: Driver<Bool> {
+        photoPickerManager.indicatingActivityDriver
+    }
+    
     func pickPhoto(with source: PhotoPickerSource) {
         photoPickerManager.pickPhoto(with: source)
     }

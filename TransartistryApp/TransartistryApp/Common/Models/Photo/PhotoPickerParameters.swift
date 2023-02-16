@@ -9,6 +9,7 @@ enum PhotoPickerSource {
 
 protocol PhotoPicking {
     var photoPickerOpenerDriver: Driver<PhotoPickerParameters> { get }
+    var indicatingActivityDriver: Driver<Bool> { get }
     
     func pickPhoto(with source: PhotoPickerSource)
 }
