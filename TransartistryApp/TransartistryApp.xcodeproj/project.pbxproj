@@ -50,6 +50,13 @@
 		58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD9692996771A0072B764 /* PhotoDistributor.swift */; };
 		58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A15299A877800755611 /* PhotoPickerManager.swift */; };
 		58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */; };
+		58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4870D299EDE90006908E8 /* AlertDescription.swift */; };
+		58D48710299EE151006908E8 /* AlertStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4870F299EE151006908E8 /* AlertStyle.swift */; };
+		58D48713299EE335006908E8 /* AlertActionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48712299EE335006908E8 /* AlertActionStyle.swift */; };
+		58D48715299EE4CD006908E8 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48714299EE4CD006908E8 /* AlertAction.swift */; };
+		58D48717299EE851006908E8 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48716299EE851006908E8 /* AlertFactory.swift */; };
+		58D4871A299FF660006908E8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48719299FF660006908E8 /* UIViewController+Alert.swift */; };
+		58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871B299FFA60006908E8 /* AlertPresentable.swift */; };
 		58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7A358299A9FAE0004BB74 /* Distributor.swift */; };
 		58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8667C299D3D9D00591CCE /* UIColor+Random.swift */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
@@ -131,6 +138,13 @@
 		58AAD9692996771A0072B764 /* PhotoDistributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDistributor.swift; sourceTree = "<group>"; };
 		58AE4A15299A877800755611 /* PhotoPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManager.swift; sourceTree = "<group>"; };
 		58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerParameters.swift; sourceTree = "<group>"; };
+		58D4870D299EDE90006908E8 /* AlertDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDescription.swift; sourceTree = "<group>"; };
+		58D4870F299EE151006908E8 /* AlertStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStyle.swift; sourceTree = "<group>"; };
+		58D48712299EE335006908E8 /* AlertActionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionStyle.swift; sourceTree = "<group>"; };
+		58D48714299EE4CD006908E8 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		58D48716299EE851006908E8 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		58D48719299FF660006908E8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		58D4871B299FFA60006908E8 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		58D7A358299A9FAE0004BB74 /* Distributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distributor.swift; sourceTree = "<group>"; };
 		58E8667C299D3D9D00591CCE /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -459,6 +473,7 @@
 		589190502784BEFB00868307 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				58D48718299FF62E006908E8 /* UIViewController */,
 				5818BA312989BFE40080F8EB /* UIStackView */,
 				5848C8802988843B0055AD99 /* UIColor */,
 				5848C87B298880E10055AD99 /* String */,
@@ -481,6 +496,7 @@
 		58AAD9632995646E0072B764 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58D4870C299E886C006908E8 /* Alert */,
 				58D7A357299A9FA30004BB74 /* Distributor */,
 				58AAD968299676F70072B764 /* Photo */,
 			);
@@ -515,6 +531,35 @@
 				58F34D2E278228B5004D33AC /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		58D4870C299E886C006908E8 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				58D48711299EE2FE006908E8 /* Style */,
+				58D4870D299EDE90006908E8 /* AlertDescription.swift */,
+				58D48714299EE4CD006908E8 /* AlertAction.swift */,
+				58D48716299EE851006908E8 /* AlertFactory.swift */,
+				58D4871B299FFA60006908E8 /* AlertPresentable.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		58D48711299EE2FE006908E8 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				58D4870F299EE151006908E8 /* AlertStyle.swift */,
+				58D48712299EE335006908E8 /* AlertActionStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		58D48718299FF62E006908E8 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				58D48719299FF660006908E8 /* UIViewController+Alert.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 		58D7A357299A9FA30004BB74 /* Distributor */ = {
@@ -862,6 +907,7 @@
 				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
 				5848C87D298880FF0055AD99 /* String+Localizing.swift in Sources */,
 				5818BA3F298B04240080F8EB /* PhotoPickerModuleAssembly.swift in Sources */,
+				58D4871A299FF660006908E8 /* UIViewController+Alert.swift in Sources */,
 				5848C87F2988817B0055AD99 /* String+Shortcuts.swift in Sources */,
 				5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */,
 				58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */,
@@ -873,12 +919,15 @@
 				5818BA42298B044A0080F8EB /* PhotoPickerFlowFactory.swift in Sources */,
 				5848C885298977B40055AD99 /* Constants+BasicInsets.swift in Sources */,
 				580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */,
+				58D48713299EE335006908E8 /* AlertActionStyle.swift in Sources */,
+				58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */,
 				5848C86E29883EF70055AD99 /* UIView+SafeArea.swift in Sources */,
 				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
 				5848C85A2985AB0D0055AD99 /* MainScreenModuleAssembly.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
 				582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */,
 				5848C8532985A1660055AD99 /* MainScreenCoordinator.swift in Sources */,
+				58D48710299EE151006908E8 /* AlertStyle.swift in Sources */,
 				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
 				58AAD967299598790072B764 /* UIImage+Data.swift in Sources */,
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
@@ -892,12 +941,15 @@
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
 				58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */,
 				5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */,
+				58D48717299EE851006908E8 /* AlertFactory.swift in Sources */,
 				58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */,
 				58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */,
 				5848C882298884510055AD99 /* UIColor+Palette.swift in Sources */,
 				5848C872298867860055AD99 /* UIFont+Weights.swift in Sources */,
 				5848C875298869090055AD99 /* NSAttributedString+Extension.swift in Sources */,
+				58D48715299EE4CD006908E8 /* AlertAction.swift in Sources */,
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
+				58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
 				5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */,

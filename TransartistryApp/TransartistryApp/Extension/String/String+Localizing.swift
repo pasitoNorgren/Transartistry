@@ -18,4 +18,16 @@ extension String {
     static var imagePickerButtonTitle: String {
         "chooseAPhoto".localized()
     }
+    
+    static var okTitle: String {
+        "ok".localized()
+    }
+    
+    static var cancelTitle: String {
+        "cancel".localized()
+    }
+    
+    static var okAlertTitle: String {
+        "ok".localized().uppercased()
+    }
 }
