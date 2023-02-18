@@ -7,8 +7,6 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
     
     private let activityRelay = PublishRelay<PhotoPickerSource>()
     
-    private let indicatingActivityRelay = PublishRelay<Bool>()
-    
     private let photoPickerRelay = PublishRelay<PhotoPickerParameters>()
     
     // activity is about whether the user wants to take/choose a photo
@@ -26,10 +24,6 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
         photoPickerRelay.asDriver(onErrorDriveWith: .never())
     }
     
-    var indicatingActivityDriver: Driver<Bool> {
-        indicatingActivityRelay.asDriver(onErrorDriveWith: .never())
-    }
-    
     func pickPhoto(with source: PhotoPickerSource) {
         activityRelay.accept(source)
     }
@@ -42,25 +36,9 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
                 owner.openPhotoPicker(source: sourceType)
             })
             .disposed(by: disposeBag)
-        
-        photoDistributor.distributionDriver
-            .drive(with: self, onNext: { owner, result in
-                owner.handlePhotoDistribution(result: result)
-            })
-            .disposed(by: disposeBag)
     }
     
     private func openPhotoPicker(source: PhotoPickerSource) {
-        trackIndicatingActivity(true)
-        
         photoPickerRelay.accept((photoDistributor, source))
-    }
-    
-    private func trackIndicatingActivity(_ isActive: Bool) {
-        indicatingActivityRelay.accept(isActive)
-    }
-    
-    private func handlePhotoDistribution(result: PhotoResult) {
-        trackIndicatingActivity(false)
     }
 }

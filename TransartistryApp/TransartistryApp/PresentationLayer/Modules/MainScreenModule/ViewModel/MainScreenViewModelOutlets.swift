@@ -1,3 +1,1 @@
-import RxCocoa
-
-protocol MainScreenViewModelOutlets: ViewModelOutlets, PhotoPicking {}
+protocol MainScreenViewModelOutlets: ViewModelOutlets, PhotoPicking, MainScreenActivityIndicating {}

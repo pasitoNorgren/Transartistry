@@ -43,13 +43,12 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
             .disposed(by: disposeBag)
         
         // logo image view animation activity
-        viewModel.indicatingActivityDriver
+        viewModel.animationIndicationActivityDriver
             .drive(customView.rx.isAnimating)
             .disposed(by: disposeBag)
         
         // camera/photo library buttons are isEnabled or not
-        viewModel.indicatingActivityDriver
-            .map { !$0 }
+        viewModel.interactionIndicationActivityDriver
             .drive(customView.rx.isButtonInteractionEnabled)
             .disposed(by: disposeBag)
     }
