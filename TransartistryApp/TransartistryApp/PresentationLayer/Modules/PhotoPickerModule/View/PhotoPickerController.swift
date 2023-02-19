@@ -28,14 +28,18 @@ final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
             return
         }
         
+        let result: PhotoResult
+        
         do {
             let originalImage = try Photo(image: image)
-            handlePickingResult(with: .success(originalImage))
+            result = .success(originalImage)
         } catch let error as PhotoPickingError {
-            handlePickingResult(with: .failure(error))
+            result = .failure(error)
         } catch {
-            handlePickingResult(with: .failure(.unexpected))
+            result = .failure(.unexpected)
         }
+        
+        handlePickingResult(with: result)
     }
     
     private func handlePickingResult(with result: PhotoResult) {
