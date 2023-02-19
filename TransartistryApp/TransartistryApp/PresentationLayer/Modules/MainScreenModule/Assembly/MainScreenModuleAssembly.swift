@@ -1,8 +1,7 @@
 import TICoordinatorKit
 
 protocol MainScreenModule: Presentable {
-    var onOpenCamera: VoidClosure? { get set }
-    var onOpenPhotoLibrary: VoidClosure? { get set }
+    var onOpenPhotoPicker: ParameterClosure<PhotoPickerParameters>? { get set }
 }
 
 enum MainScreenModuleAssembly {

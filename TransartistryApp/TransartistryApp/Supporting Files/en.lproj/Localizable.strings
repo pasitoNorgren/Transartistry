@@ -9,3 +9,9 @@
 "errorOccured" = "An error occured!";
 "fixingError" = "An unexpected error has occurred, we are already working to fix it!";
 "cancel" = "Cancel";
+"ok" = "Ok";
+"repick" = "Try again";
+
+"extractingError" = "Unable to extract a photo. ";
+"convertingError" = "Unable to convert a photo. ";
+"pleaseTryAgain" = "Please try again. ";

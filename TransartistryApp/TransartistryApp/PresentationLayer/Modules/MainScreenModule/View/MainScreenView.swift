@@ -10,12 +10,12 @@ final class MainScreenView: BaseView {
     private let containerView = UIStackView()
     
     fileprivate let cameraPickerButtonView = WrapperView<UIButton>(insets: .zero)
-    fileprivate let photoPickerButtonView = WrapperView<UIButton>(insets: .zero)
+    fileprivate let imagePickerButtonView = WrapperView<UIButton>(insets: .zero)
     
     override func configureSubviewsAdding() {
         super.configureSubviewsAdding()
         
-        containerView.addArrangedSubviews(cameraPickerButtonView, photoPickerButtonView)
+        containerView.addArrangedSubviews(cameraPickerButtonView, imagePickerButtonView)
         
         addSubviews(logoImageView, appNameLabel, containerView)
     }
@@ -42,7 +42,7 @@ final class MainScreenView: BaseView {
             $0.centerX.equalToSuperview()
         }
         
-        [cameraPickerButtonView, photoPickerButtonView].forEach {
+        [cameraPickerButtonView, imagePickerButtonView].forEach {
             $0.snp.makeConstraints {
                 $0.height.equalTo(Constants.defaultButtonHeight48)
             }
@@ -54,7 +54,7 @@ final class MainScreenView: BaseView {
         
         backgroundColor = .whiteLM
         
-        logoImageView.tintColor = .blackLM
+        logoImageView.tintColor = Constants.logoImageViewTintColor
         logoImageView.contentMode = .scaleAspectFit
         
         containerView.axis = .vertical
@@ -65,13 +65,14 @@ final class MainScreenView: BaseView {
         cameraPickerButtonView.wrappedView.layer.borderColor = UIColor.purple.cgColor
         cameraPickerButtonView.wrappedView.layer.borderWidth = 1
         
-        photoPickerButtonView.wrappedView.backgroundColor = .blackLM
-        photoPickerButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
+        imagePickerButtonView.wrappedView.backgroundColor = .blackLM
+        imagePickerButtonView.wrappedView.setTitleColor(.whiteLM, for: .normal)
         
-        [cameraPickerButtonView.wrappedView, photoPickerButtonView.wrappedView].forEach {
+        [cameraPickerButtonView.wrappedView, imagePickerButtonView.wrappedView].forEach {
             $0.layer.cornerRadius = Constants.cornerRadius10
             $0.titleLabel?.font = .boldFont(of: Constants.actionButtonFontSize)
             $0.setTitleColor(.purple, for: .highlighted)
+            $0.setTitleColor(.gray, for: .disabled)
         }
     }
     
@@ -81,7 +82,12 @@ final class MainScreenView: BaseView {
         appNameLabel.wrappedView.attributedText = .mainScreenAppNameAttributed(string: .appName)
         
         cameraPickerButtonView.wrappedView.setTitle(.cameraPickerButtonTitle, for: .normal)
-        photoPickerButtonView.wrappedView.setTitle(.photoPickerButtonTitle, for: .normal)
+        imagePickerButtonView.wrappedView.setTitle(.imagePickerButtonTitle, for: .normal)
+    }
+    
+    fileprivate func configureButtonsAvailability(with isEnabled: Bool) {
+        cameraPickerButtonView.wrappedView.isEnabled = isEnabled
+        imagePickerButtonView.wrappedView.isEnabled = isEnabled
     }
 }
 
@@ -90,6 +96,8 @@ private extension Constants {
     static let logoImageViewHeightMultiplier: CGFloat = 0.5
     static let appNameLabelHeightMultiplier: CGFloat = 0.2
     static let actionButtonFontSize: CGFloat = 16
+    
+    static let logoImageViewTintColor: UIColor = .blackLM
 }
 
 extension Reactive where Base: MainScreenView {
@@ -97,7 +105,42 @@ extension Reactive where Base: MainScreenView {
         base.cameraPickerButtonView.wrappedView.rx.tap
     }
     
-    var photoPickerButtonTap: ControlEvent<Void> {
-        base.photoPickerButtonView.wrappedView.rx.tap
+    var imagePickerButtonTap: ControlEvent<Void> {
+        base.imagePickerButtonView.wrappedView.rx.tap
+    }
+    
+    var isAnimating: Binder<Bool> {
+        Binder(self.base) { base, shouldStartAnimation in
+            base.animate(with: shouldStartAnimation)
+        }
+    }
+    
+    var isButtonInteractionEnabled: Binder<Bool> {
+        Binder(self.base) { base, isEnabled in
+            base.configureButtonsAvailability(with: isEnabled)
+        }
+    }
+}
+
+// MARK: - Animation
+
+extension MainScreenView {
+    
+    func animate(with shouldStartAnimation: Bool) {
+        shouldStartAnimation
+            ? startAnimation()
+            : stopAnimation()
+    }
+    
+    private func startAnimation() {
+        UIView.animate(withDuration: 1, delay: .zero, options: [.autoreverse, .repeat, .curveEaseIn]) { [weak self] in
+            self?.logoImageView.tintColor = .random()
+        }
+    }
+    
+    private func stopAnimation() {
+        UIView.animate(withDuration: 1, delay: .zero, options: [.beginFromCurrentState]) { [weak self] in
+            self?.logoImageView.tintColor = Constants.logoImageViewTintColor
+        }
     }
 }

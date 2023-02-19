@@ -4,11 +4,12 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
                                                                       DisposeBagHolder,
                                                                       MainScreenModule {
     // MARK: - DisposeBagHolder
+    
     var disposeBag: DisposeBag = DisposeBag()
     
     // MARK: - MainScreenModule
-    var onOpenCamera: VoidClosure?
-    var onOpenPhotoLibrary: VoidClosure?
+    
+    var onOpenPhotoPicker: ParameterClosure<PhotoPickerParameters>?
     
     override func configureAppearance() {
         super.configureAppearance()
@@ -23,30 +24,36 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
             .asObservable()
             .throttle(.seconds(2), scheduler: MainScheduler.instance)
             .subscribe(with: viewModel, onNext: { owner, _ in
-                owner.cameraPickerButtonTapped()
+                owner.pickPhoto(with: .camera)
             })
             .disposed(by: disposeBag)
         
-        customView.rx.photoPickerButtonTap
+        customView.rx.imagePickerButtonTap
             .asObservable()
             .throttle(.seconds(2), scheduler: MainScheduler.instance)
             .subscribe(with: viewModel, onNext: { owner, _ in
-                owner.photoPickerButtonTapped()
+                owner.pickPhoto(with: .imageLibrary)
             })
             .disposed(by: disposeBag)
         
-        viewModel
-            .cameraPickerDriver
-            .drive(with: self, onNext: { owner, _ in
-                owner.onOpenCamera?()
+        viewModel.photoPickerOpenerDriver
+            .drive(with: self, onNext: { owner, parameters in
+                owner.onOpenPhotoPicker?(parameters)
             })
             .disposed(by: disposeBag)
         
-        viewModel
-            .photoPickerDriver
-            .drive(with: self, onNext: { owner, _ in
-                owner.onOpenPhotoLibrary?()
-            })
+        // logo image view animation activity
+        viewModel.animationIndicationActivityDriver
+            .drive(customView.rx.isAnimating)
+            .disposed(by: disposeBag)
+        
+        // camera/photo library buttons are isEnabled or not
+        viewModel.interactionIndicationActivityDriver
+            .drive(customView.rx.isButtonInteractionEnabled)
+            .disposed(by: disposeBag)
+        
+        viewModel.alertPresentationDriver
+            .drive(self.rx.alertPresentation)
             .disposed(by: disposeBag)
     }
 }

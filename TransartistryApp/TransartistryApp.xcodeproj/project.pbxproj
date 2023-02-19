@@ -12,6 +12,10 @@
 		5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */; };
 		5818BA362989C6FE0080F8EB /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA352989C6FE0080F8EB /* Closures.swift */; };
 		5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */; };
+		5818BA3D298B04110080F8EB /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA3C298B04110080F8EB /* PhotoPickerController.swift */; };
+		5818BA3F298B04240080F8EB /* PhotoPickerModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA3E298B04240080F8EB /* PhotoPickerModuleAssembly.swift */; };
+		5818BA42298B044A0080F8EB /* PhotoPickerFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA41298B044A0080F8EB /* PhotoPickerFlowFactory.swift */; };
+		5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818BA43298BE6E20080F8EB /* BaseModule.swift */; };
 		582B64E42980622E004D76EB /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E32980622E004D76EB /* Bindable.swift */; };
 		582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */; };
 		582B64EB29817DFC004D76EB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582B64EA29817DFC004D76EB /* BaseView.swift */; };
@@ -41,6 +45,22 @@
 		5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C887298978B60055AD99 /* Constants+Radius.swift */; };
 		5848C88A298979470055AD99 /* Constants+Heights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C889298979470055AD99 /* Constants+Heights.swift */; };
 		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
+		58AAD965299564840072B764 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD964299564840072B764 /* Photo.swift */; };
+		58AAD967299598790072B764 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD966299598790072B764 /* UIImage+Data.swift */; };
+		58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD9692996771A0072B764 /* PhotoDistributor.swift */; };
+		58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A15299A877800755611 /* PhotoPickerManager.swift */; };
+		58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */; };
+		58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4870D299EDE90006908E8 /* AlertDescription.swift */; };
+		58D48710299EE151006908E8 /* AlertStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4870F299EE151006908E8 /* AlertStyle.swift */; };
+		58D48713299EE335006908E8 /* AlertActionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48712299EE335006908E8 /* AlertActionStyle.swift */; };
+		58D48715299EE4CD006908E8 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48714299EE4CD006908E8 /* AlertAction.swift */; };
+		58D48717299EE851006908E8 /* AlertFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48716299EE851006908E8 /* AlertFactory.swift */; };
+		58D4871A299FF660006908E8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48719299FF660006908E8 /* UIViewController+Alert.swift */; };
+		58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871B299FFA60006908E8 /* AlertPresentable.swift */; };
+		58D4871E29A12B0C006908E8 /* MainScreenActivityIndicating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871D29A12B0C006908E8 /* MainScreenActivityIndicating.swift */; };
+		58D4872029A12F88006908E8 /* PhotoResultPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */; };
+		58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7A358299A9FAE0004BB74 /* Distributor.swift */; };
+		58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8667C299D3D9D00591CCE /* UIColor+Random.swift */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
 		58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D27278228B3004D33AC /* SceneDelegate.swift */; };
 		58F34D2F278228B5004D33AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58F34D2E278228B5004D33AC /* Assets.xcassets */; };
@@ -81,6 +101,10 @@
 		5818BA322989BFFF0080F8EB /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
 		5818BA352989C6FE0080F8EB /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 		5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewModelOutlets.swift; sourceTree = "<group>"; };
+		5818BA3C298B04110080F8EB /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
+		5818BA3E298B04240080F8EB /* PhotoPickerModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerModuleAssembly.swift; sourceTree = "<group>"; };
+		5818BA41298B044A0080F8EB /* PhotoPickerFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerFlowFactory.swift; sourceTree = "<group>"; };
+		5818BA43298BE6E20080F8EB /* BaseModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModule.swift; sourceTree = "<group>"; };
 		582B64E32980622E004D76EB /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		582B64E5298062C1004D76EB /* ViewLayerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayerConfigurable.swift; sourceTree = "<group>"; };
 		582B64EA29817DFC004D76EB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -111,6 +135,22 @@
 		5848C889298979470055AD99 /* Constants+Heights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Heights.swift"; sourceTree = "<group>"; };
 		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		58AAD964299564840072B764 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		58AAD966299598790072B764 /* UIImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Data.swift"; sourceTree = "<group>"; };
+		58AAD9692996771A0072B764 /* PhotoDistributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDistributor.swift; sourceTree = "<group>"; };
+		58AE4A15299A877800755611 /* PhotoPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManager.swift; sourceTree = "<group>"; };
+		58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerParameters.swift; sourceTree = "<group>"; };
+		58D4870D299EDE90006908E8 /* AlertDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDescription.swift; sourceTree = "<group>"; };
+		58D4870F299EE151006908E8 /* AlertStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertStyle.swift; sourceTree = "<group>"; };
+		58D48712299EE335006908E8 /* AlertActionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionStyle.swift; sourceTree = "<group>"; };
+		58D48714299EE4CD006908E8 /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		58D48716299EE851006908E8 /* AlertFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertFactory.swift; sourceTree = "<group>"; };
+		58D48719299FF660006908E8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		58D4871B299FFA60006908E8 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
+		58D4871D29A12B0C006908E8 /* MainScreenActivityIndicating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenActivityIndicating.swift; sourceTree = "<group>"; };
+		58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResultPresentable.swift; sourceTree = "<group>"; };
+		58D7A358299A9FAE0004BB74 /* Distributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distributor.swift; sourceTree = "<group>"; };
+		58E8667C299D3D9D00591CCE /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F34D25278228B3004D33AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58F34D27278228B3004D33AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +246,39 @@
 			path = Closures;
 			sourceTree = "<group>";
 		};
+		5818BA39298B039B0080F8EB /* PhotoPickerModule */ = {
+			isa = PBXGroup;
+			children = (
+				5818BA3A298B03F80080F8EB /* Assembly */,
+				5818BA3B298B04000080F8EB /* View */,
+			);
+			path = PhotoPickerModule;
+			sourceTree = "<group>";
+		};
+		5818BA3A298B03F80080F8EB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				5818BA3E298B04240080F8EB /* PhotoPickerModuleAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		5818BA3B298B04000080F8EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5818BA3C298B04110080F8EB /* PhotoPickerController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5818BA40298B042E0080F8EB /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				5818BA41298B044A0080F8EB /* PhotoPickerFlowFactory.swift */,
+			);
+			path = PhotoPicker;
+			sourceTree = "<group>";
+		};
 		582B64DE29806091004D76EB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +308,7 @@
 				582B64EF298181FF004D76EB /* ViewModelConfigurable.swift */,
 				582B64F1298187E9004D76EB /* ViewModelOutlets.swift */,
 				5848C84C29859E780055AD99 /* DisposeBagHolder.swift */,
+				5818BA43298BE6E20080F8EB /* BaseModule.swift */,
 			);
 			path = BaseProtocols;
 			sourceTree = "<group>";
@@ -269,6 +343,7 @@
 		5848C84E2985A1260055AD99 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				5818BA40298B042E0080F8EB /* PhotoPicker */,
 				5848C8512985A1500055AD99 /* MainScreen */,
 			);
 			path = Flows;
@@ -287,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				5848C8552985A2630055AD99 /* MainScreenModule */,
+				5818BA39298B039B0080F8EB /* PhotoPickerModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -314,6 +390,7 @@
 			children = (
 				5848C85B2985AC980055AD99 /* MainScreenViewModel.swift */,
 				5818BA372989CFE50080F8EB /* MainScreenViewModelOutlets.swift */,
+				58D4871D29A12B0C006908E8 /* MainScreenActivityIndicating.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -340,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				5848C86B29881C430055AD99 /* UIImage+Sources.swift */,
+				58AAD966299598790072B764 /* UIImage+Data.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -373,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				5848C881298884510055AD99 /* UIColor+Palette.swift */,
+				58E8667C299D3D9D00591CCE /* UIColor+Random.swift */,
 			);
 			path = UIColor;
 			sourceTree = "<group>";
@@ -399,6 +478,7 @@
 		589190502784BEFB00868307 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				58D48718299FF62E006908E8 /* UIViewController */,
 				5818BA312989BFE40080F8EB /* UIStackView */,
 				5848C8802988843B0055AD99 /* UIColor */,
 				5848C87B298880E10055AD99 /* String */,
@@ -408,6 +488,36 @@
 				5848C86729881B1E0055AD99 /* UIView */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		58AAD961299564570072B764 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				58AAD9632995646E0072B764 /* Models */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		58AAD9632995646E0072B764 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58D4870C299E886C006908E8 /* Alert */,
+				58D7A357299A9FA30004BB74 /* Distributor */,
+				58AAD968299676F70072B764 /* Photo */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58AAD968299676F70072B764 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				58AAD964299564840072B764 /* Photo.swift */,
+				58AAD9692996771A0072B764 /* PhotoDistributor.swift */,
+				58AE4A15299A877800755611 /* PhotoPickerManager.swift */,
+				58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */,
+				58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */,
+			);
+			path = Photo;
 			sourceTree = "<group>";
 		};
 		58C12DD82782367200D9BB12 /* Supporting Files */ = {
@@ -427,6 +537,43 @@
 				58F34D2E278228B5004D33AC /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		58D4870C299E886C006908E8 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				58D48711299EE2FE006908E8 /* Style */,
+				58D4870D299EDE90006908E8 /* AlertDescription.swift */,
+				58D48714299EE4CD006908E8 /* AlertAction.swift */,
+				58D48716299EE851006908E8 /* AlertFactory.swift */,
+				58D4871B299FFA60006908E8 /* AlertPresentable.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		58D48711299EE2FE006908E8 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				58D4870F299EE151006908E8 /* AlertStyle.swift */,
+				58D48712299EE335006908E8 /* AlertActionStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		58D48718299FF62E006908E8 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				58D48719299FF660006908E8 /* UIViewController+Alert.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		58D7A357299A9FA30004BB74 /* Distributor */ = {
+			isa = PBXGroup;
+			children = (
+				58D7A358299A9FAE0004BB74 /* Distributor.swift */,
+			);
+			path = Distributor;
 			sourceTree = "<group>";
 		};
 		58F34D19278228B2004D33AC = {
@@ -454,6 +601,7 @@
 		58F34D24278228B3004D33AC /* TransartistryApp */ = {
 			isa = PBXGroup;
 			children = (
+				58AAD961299564570072B764 /* Common */,
 				5848C883298977770055AD99 /* Utills */,
 				580A3ABE2985752300A8981D /* ApplicationLayer */,
 				582B64DE29806091004D76EB /* PresentationLayer */,
@@ -764,32 +912,52 @@
 			files = (
 				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
 				5848C87D298880FF0055AD99 /* String+Localizing.swift in Sources */,
+				5818BA3F298B04240080F8EB /* PhotoPickerModuleAssembly.swift in Sources */,
+				58D4871A299FF660006908E8 /* UIViewController+Alert.swift in Sources */,
 				5848C87F2988817B0055AD99 /* String+Shortcuts.swift in Sources */,
 				5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */,
+				58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */,
 				5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */,
 				582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */,
 				5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */,
 				5848C88A298979470055AD99 /* Constants+Heights.swift in Sources */,
+				58AAD965299564840072B764 /* Photo.swift in Sources */,
+				5818BA42298B044A0080F8EB /* PhotoPickerFlowFactory.swift in Sources */,
 				5848C885298977B40055AD99 /* Constants+BasicInsets.swift in Sources */,
 				580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */,
+				58D48713299EE335006908E8 /* AlertActionStyle.swift in Sources */,
+				58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */,
+				58D4871E29A12B0C006908E8 /* MainScreenActivityIndicating.swift in Sources */,
 				5848C86E29883EF70055AD99 /* UIView+SafeArea.swift in Sources */,
 				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
 				5848C85A2985AB0D0055AD99 /* MainScreenModuleAssembly.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
 				582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */,
 				5848C8532985A1660055AD99 /* MainScreenCoordinator.swift in Sources */,
+				58D48710299EE151006908E8 /* AlertStyle.swift in Sources */,
 				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
+				58AAD967299598790072B764 /* UIImage+Data.swift in Sources */,
+				58D4872029A12F88006908E8 /* PhotoResultPresentable.swift in Sources */,
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
+				5818BA3D298B04110080F8EB /* PhotoPickerController.swift in Sources */,
 				580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */,
 				5848C85C2985AC980055AD99 /* MainScreenViewModel.swift in Sources */,
 				5848C864298816350055AD99 /* WrapperView.swift in Sources */,
 				582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */,
 				5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */,
+				58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */,
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
+				58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */,
+				5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */,
+				58D48717299EE851006908E8 /* AlertFactory.swift in Sources */,
+				58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */,
+				58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */,
 				5848C882298884510055AD99 /* UIColor+Palette.swift in Sources */,
 				5848C872298867860055AD99 /* UIFont+Weights.swift in Sources */,
 				5848C875298869090055AD99 /* NSAttributedString+Extension.swift in Sources */,
+				58D48715299EE4CD006908E8 /* AlertAction.swift in Sources */,
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
+				58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
 				5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */,
