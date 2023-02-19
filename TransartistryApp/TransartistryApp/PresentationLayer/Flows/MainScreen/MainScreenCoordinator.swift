@@ -36,8 +36,8 @@ final class MainScreenCoordinator: BaseCoordinator {
         module.onClose = onCloseModule
         
         module.onCloseWithCondition = { [weak distributor = parameters.distributor] in
-            distributor?.publish(item: .failure(.void))
             onCloseModule?()
+            distributor?.publish(item: .failure(.void))
         }
         
         module.onPhotoPicked = { [weak distributor = parameters.distributor] photo in

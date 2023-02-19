@@ -57,9 +57,9 @@ extension PhotoPickerController: UIImagePickerControllerDelegate & UINavigationC
             return
         }
         
-        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+        DispatchQueue.global(qos: .userInteractive).async {
             let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-            self?.didFinishPicking(image: originalImage)
+            self.didFinishPicking(image: originalImage)
         }
     }
 }
