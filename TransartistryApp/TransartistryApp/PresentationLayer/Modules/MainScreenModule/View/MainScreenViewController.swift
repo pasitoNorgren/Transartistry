@@ -51,5 +51,9 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
         viewModel.interactionIndicationActivityDriver
             .drive(customView.rx.isButtonInteractionEnabled)
             .disposed(by: disposeBag)
+        
+        viewModel.alertPresentationDriver
+            .drive(self.rx.alertPresentation)
+            .disposed(by: disposeBag)
     }
 }

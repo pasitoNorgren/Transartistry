@@ -29,9 +29,15 @@ final class MainScreenCoordinator: BaseCoordinator {
         
         let module = mainScreenFactory.makePhotoPickerModule(with: parameters.source)
         
-        module.onClose = { [weak router, weak distributor = parameters.distributor] in
-            distributor?.publish(item: .failure(.void))
+        let onCloseModule: VoidClosure? = { [weak router] in
             router?.dismissModule()
+        }
+        
+        module.onClose = onCloseModule
+        
+        module.onCloseWithCondition = { [weak distributor = parameters.distributor] in
+            distributor?.publish(item: .failure(.void))
+            onCloseModule?()
         }
         
         module.onPhotoPicked = { [weak distributor = parameters.distributor] photo in

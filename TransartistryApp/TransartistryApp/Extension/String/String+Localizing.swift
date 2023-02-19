@@ -30,4 +30,36 @@ extension String {
     static var okAlertTitle: String {
         "ok".localized().uppercased()
     }
+    
+    static var repickTitle: String {
+        "repick".localized()
+    }
+    
+    static var pleaseTryAgainTitle: String {
+        "pleaseTryAgain".localized()
+    }
+    
+    static var extractingErrorTitle: String {
+        "extractingError".localized()
+    }
+    
+    static var convertingErrorTitle: String {
+        "convertingError".localized()
+    }
+    
+    static var extractingErrorAlertTitle: String {
+        extractingErrorTitle + pleaseTryAgainTitle
+    }
+    
+    static var convertingErrorAlertTitle: String {
+        convertingErrorTitle + pleaseTryAgainTitle
+    }
+    
+    static var errorOccuredTitle: String {
+        "errorOccured".localized()
+    }
+    
+    static var fixingErrorTitle: String {
+        "fixingError".localized()
+    }
 }

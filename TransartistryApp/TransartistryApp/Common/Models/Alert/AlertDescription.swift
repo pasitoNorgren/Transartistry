@@ -8,7 +8,7 @@ final class AlertDescription {
     let isPresentationAnimated: Bool
     let openingCompilationHandler: VoidClosure?
     
-    init(title: String,
+    init(title: String = .errorOccuredTitle,
          message: String? = nil,
          style: AlertStyle = .alert,
          actions: [AlertAction] = [.simpleOKAction(nil)],

@@ -1,7 +1,7 @@
 import RxSwift
 import RxCocoa
 
-class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
+class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking, PhotoResultPresentable {
     
     private let photoDistributor = PhotoDistributor()
     
@@ -26,6 +26,12 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking {
     
     func pickPhoto(with source: PhotoPickerSource) {
         activityRelay.accept(source)
+    }
+    
+    // MARK: - PhotoResultPresentable
+    
+    var photoResultDriver: Driver<PhotoResult> {
+        photoDistributor.distributionDriver
     }
     
     override func bindComponents() {

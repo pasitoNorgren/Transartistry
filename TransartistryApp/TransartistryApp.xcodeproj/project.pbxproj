@@ -58,6 +58,7 @@
 		58D4871A299FF660006908E8 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D48719299FF660006908E8 /* UIViewController+Alert.swift */; };
 		58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871B299FFA60006908E8 /* AlertPresentable.swift */; };
 		58D4871E29A12B0C006908E8 /* MainScreenActivityIndicating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871D29A12B0C006908E8 /* MainScreenActivityIndicating.swift */; };
+		58D4872029A12F88006908E8 /* PhotoResultPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */; };
 		58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D7A358299A9FAE0004BB74 /* Distributor.swift */; };
 		58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E8667C299D3D9D00591CCE /* UIColor+Random.swift */; };
 		58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D25278228B3004D33AC /* AppDelegate.swift */; };
@@ -147,6 +148,7 @@
 		58D48719299FF660006908E8 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		58D4871B299FFA60006908E8 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		58D4871D29A12B0C006908E8 /* MainScreenActivityIndicating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenActivityIndicating.swift; sourceTree = "<group>"; };
+		58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoResultPresentable.swift; sourceTree = "<group>"; };
 		58D7A358299A9FAE0004BB74 /* Distributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distributor.swift; sourceTree = "<group>"; };
 		58E8667C299D3D9D00591CCE /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		58F34D22278228B3004D33AC /* TransartistryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransartistryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -513,6 +515,7 @@
 				58AAD9692996771A0072B764 /* PhotoDistributor.swift */,
 				58AE4A15299A877800755611 /* PhotoPickerManager.swift */,
 				58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */,
+				58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -934,6 +937,7 @@
 				58D48710299EE151006908E8 /* AlertStyle.swift in Sources */,
 				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
 				58AAD967299598790072B764 /* UIImage+Data.swift in Sources */,
+				58D4872029A12F88006908E8 /* PhotoResultPresentable.swift in Sources */,
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
 				5818BA3D298B04110080F8EB /* PhotoPickerController.swift in Sources */,
 				580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */,

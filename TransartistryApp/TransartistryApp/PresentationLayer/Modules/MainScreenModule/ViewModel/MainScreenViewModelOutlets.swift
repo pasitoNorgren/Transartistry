@@ -1,1 +1,4 @@
-protocol MainScreenViewModelOutlets: ViewModelOutlets, PhotoPicking, MainScreenActivityIndicating {}
+protocol MainScreenViewModelOutlets: ViewModelOutlets,
+                                     PhotoPicking,
+                                     MainScreenActivityIndicating,
+                                     AlertPresentable {}

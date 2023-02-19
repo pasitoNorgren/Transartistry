@@ -5,6 +5,7 @@ final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
     // MARK: - PhotoPickerModule
     
     var onClose: VoidClosure?
+    var onCloseWithCondition: VoidClosure?
     var onPhotoPicked: ParameterClosure<PhotoResult>?
     
     override func viewDidLoad() {
@@ -15,6 +16,10 @@ final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
     
     private func closeModule() {
         onClose?()
+    }
+    
+    private func closeModuleWithCondition() {
+        onCloseWithCondition?()
     }
     
     private func didFinishPicking(image: UIImage?) {
@@ -40,7 +45,7 @@ final class PhotoPickerController: UIImagePickerController, PhotoPickerModule {
 
 extension PhotoPickerController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        closeModule()
+        closeModuleWithCondition()
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
