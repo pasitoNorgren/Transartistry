@@ -37,15 +37,10 @@ final class MainScreenView: BaseView {
         }
         
         containerView.snp.makeConstraints {
+            $0.top.equalTo(appNameLabel.snp.bottom)
             $0.bottom.equalTo(safeArea).inset(Constants.inset32)
             $0.width.equalToSuperview().multipliedBy(Constants.generalWidthMultiplier)
             $0.centerX.equalToSuperview()
-        }
-        
-        [cameraPickerButtonView, imagePickerButtonView].forEach {
-            $0.snp.makeConstraints {
-                $0.height.equalTo(Constants.defaultButtonHeight48)
-            }
         }
     }
     
@@ -59,6 +54,7 @@ final class MainScreenView: BaseView {
         
         containerView.axis = .vertical
         containerView.spacing = Constants.inset16
+        containerView.distribution = .fillEqually
         
         cameraPickerButtonView.wrappedView.backgroundColor = .whiteLM
         cameraPickerButtonView.wrappedView.setTitleColor(.blackLM, for: .normal)
@@ -86,8 +82,24 @@ final class MainScreenView: BaseView {
     }
     
     fileprivate func configureButtonsAvailability(with isEnabled: Bool) {
-        cameraPickerButtonView.wrappedView.isEnabled = isEnabled
-        imagePickerButtonView.wrappedView.isEnabled = isEnabled
+        [cameraPickerButtonView.wrappedView, imagePickerButtonView.wrappedView].forEach {
+            $0.isEnabled = isEnabled
+        }
+    }
+    
+    fileprivate func handleOrientationChanges() {
+        
+        let deviceOrientation = UIDevice.current.orientation
+        
+        guard deviceOrientation.isValidInterfaceOrientation else {
+            return
+        }
+        
+        if deviceOrientation == .landscapeLeft || deviceOrientation == .landscapeRight {
+            containerView.axis = .horizontal
+        } else {
+            containerView.axis = .vertical
+        }
     }
 }
 
@@ -118,6 +130,12 @@ extension Reactive where Base: MainScreenView {
     var isButtonInteractionEnabled: Binder<Bool> {
         Binder(self.base) { base, isEnabled in
             base.configureButtonsAvailability(with: isEnabled)
+        }
+    }
+    
+    var orientationHandler: Binder<Void> {
+        Binder(self.base) { base, _ in
+            base.handleOrientationChanges()
         }
     }
 }

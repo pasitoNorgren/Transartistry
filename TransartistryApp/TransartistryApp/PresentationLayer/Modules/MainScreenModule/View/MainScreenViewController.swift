@@ -55,5 +55,11 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
         viewModel.alertPresentationDriver
             .drive(self.rx.alertPresentation)
             .disposed(by: disposeBag)
+        
+        deviceOrientationHandler
+            .observe(on: MainScheduler.instance)
+            .map { _ in Void() }
+            .subscribe(customView.rx.orientationHandler)
+            .disposed(by: disposeBag)
     }
 }

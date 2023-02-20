@@ -68,6 +68,7 @@
 		58F34D3D278228B5004D33AC /* TransartistryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D3C278228B5004D33AC /* TransartistryAppTests.swift */; };
 		58F34D47278228B5004D33AC /* TransartistryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D46278228B5004D33AC /* TransartistryAppUITests.swift */; };
 		58F34D49278228B5004D33AC /* TransartistryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F34D48278228B5004D33AC /* TransartistryAppUITestsLaunchTests.swift */; };
+		58FC57AA29A410A0000DB358 /* UIViewController+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FC57A929A410A0000DB358 /* UIViewController+Orientation.swift */; };
 		7FBCC8FD14717C82F56C81E1 /* Pods_TransartistryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E0F1FA753D75C9F8B1D39D /* Pods_TransartistryAppTests.framework */; };
 		82BB20C6C1A5656B30A46120 /* Pods_TransartistryApp_TransartistryAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343ECC07083EE0830FA64F75 /* Pods_TransartistryApp_TransartistryAppUITests.framework */; };
 		F27EB0EAFE8BE9D9B0C7C3C3 /* Pods_TransartistryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43BD0876E76B22A813A0F7C /* Pods_TransartistryApp.framework */; };
@@ -162,6 +163,7 @@
 		58F34D42278228B5004D33AC /* TransartistryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransartistryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58F34D46278228B5004D33AC /* TransartistryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransartistryAppUITests.swift; sourceTree = "<group>"; };
 		58F34D48278228B5004D33AC /* TransartistryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransartistryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		58FC57A929A410A0000DB358 /* UIViewController+Orientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Orientation.swift"; sourceTree = "<group>"; };
 		7CCF561616755555CEA0730B /* Pods-TransartistryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransartistryApp.debug.xcconfig"; path = "Target Support Files/Pods-TransartistryApp/Pods-TransartistryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A43BD0876E76B22A813A0F7C /* Pods_TransartistryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransartistryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E0F1FA753D75C9F8B1D39D /* Pods_TransartistryAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransartistryAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -564,6 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				58D48719299FF660006908E8 /* UIViewController+Alert.swift */,
+				58FC57A929A410A0000DB358 /* UIViewController+Orientation.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -947,6 +950,7 @@
 				5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */,
 				58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */,
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
+				58FC57AA29A410A0000DB358 /* UIViewController+Orientation.swift in Sources */,
 				58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */,
 				5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */,
 				58D48717299EE851006908E8 /* AlertFactory.swift in Sources */,
@@ -1154,8 +1158,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please, allow access to take a photo directly in the App!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1184,8 +1187,7 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please, allow access to take a photo directly in the App!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
