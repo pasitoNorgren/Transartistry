@@ -51,6 +51,8 @@
 		58621BAC29CA1224005C514C /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BAB29CA1224005C514C /* EditorViewController.swift */; };
 		58621BAE29CA1251005C514C /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BAD29CA1251005C514C /* EditorView.swift */; };
 		58621BB029CA13C0005C514C /* EditorViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BAF29CA13C0005C514C /* EditorViewModelOutlets.swift */; };
+		58621BB229CA2C41005C514C /* PhotoSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BB129CA2C41005C514C /* PhotoSender.swift */; };
+		58621BB529CA3490005C514C /* EditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BB429CA3490005C514C /* EditorConfiguration.swift */; };
 		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
 		58AAD965299564840072B764 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD964299564840072B764 /* Photo.swift */; };
 		58AAD967299598790072B764 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD966299598790072B764 /* UIImage+Data.swift */; };
@@ -148,6 +150,8 @@
 		58621BAB29CA1224005C514C /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		58621BAD29CA1251005C514C /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
 		58621BAF29CA13C0005C514C /* EditorViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModelOutlets.swift; sourceTree = "<group>"; };
+		58621BB129CA2C41005C514C /* PhotoSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSender.swift; sourceTree = "<group>"; };
+		58621BB429CA3490005C514C /* EditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorConfiguration.swift; sourceTree = "<group>"; };
 		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58AAD964299564840072B764 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -496,6 +500,7 @@
 		58621B9E29C9FEB5005C514C /* EditorModule */ = {
 			isa = PBXGroup;
 			children = (
+				58621BB329CA347F005C514C /* Model */,
 				58621B9F29C9FED4005C514C /* Assembly */,
 				58621BA129C9FEE4005C514C /* View */,
 				58621BA029C9FEDE005C514C /* ViewModel */,
@@ -536,6 +541,14 @@
 				58621BA729CA01A7005C514C /* EditorFlowFactory.swift */,
 			);
 			path = Editor;
+			sourceTree = "<group>";
+		};
+		58621BB329CA347F005C514C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58621BB429CA3490005C514C /* EditorConfiguration.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		589190502784BEFB00868307 /* Extension */ = {
@@ -579,6 +592,7 @@
 				58AE4A15299A877800755611 /* PhotoPickerManager.swift */,
 				58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */,
 				58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */,
+				58621BB129CA2C41005C514C /* PhotoSender.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -997,6 +1011,7 @@
 				58D4871E29A12B0C006908E8 /* MainScreenActivityIndicating.swift in Sources */,
 				5848C86E29883EF70055AD99 /* UIView+SafeArea.swift in Sources */,
 				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
+				58621BB229CA2C41005C514C /* PhotoSender.swift in Sources */,
 				58621BA629CA008C005C514C /* EditorCoordinator.swift in Sources */,
 				5848C85A2985AB0D0055AD99 /* MainScreenModuleAssembly.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
@@ -1030,6 +1045,7 @@
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
+				58621BB529CA3490005C514C /* EditorConfiguration.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
 				5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */,
 				5848C86C29881C430055AD99 /* UIImage+Sources.swift in Sources */,

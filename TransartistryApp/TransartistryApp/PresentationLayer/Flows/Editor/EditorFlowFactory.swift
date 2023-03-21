@@ -1,9 +1,9 @@
 protocol EditorFlowFactoring {
-    func makeEditorModule() -> EditorModule
+    func makeEditorModule(configuration: EditorConfigurable) -> EditorModule
 }
 
 class EditorFlowFactory: EditorFlowFactoring {
-    func makeEditorModule() -> EditorModule {
-        EditorModuleAssembly.createEditorModule()
+    func makeEditorModule(configuration: EditorConfigurable) -> EditorModule {
+        EditorModuleAssembly.createEditorModule(with: configuration)
     }
 }

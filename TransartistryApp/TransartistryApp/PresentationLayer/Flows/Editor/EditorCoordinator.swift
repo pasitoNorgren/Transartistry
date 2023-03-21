@@ -11,18 +11,16 @@ final class EditorCoordinator: BaseCoordinator {
         self.factory = factory
     }
     
-    override func start() {
-        startEditorModule()
+    @available(*, unavailable)
+    override func start() {}
+    
+    func start(with configuration: EditorConfigurable) {
+        startEditorModule(with: configuration)
     }
     
-    private func startEditorModule() {
+    private func startEditorModule(with configuration: EditorConfigurable) {
         
-        let module = factory.makeEditorModule()
-        
-        module.onClose = { [weak router] in
-            router?.popModule()
-        }
-        
+        let module = factory.makeEditorModule(configuration: configuration)
         router.push(module)
     }
 }

@@ -2,6 +2,7 @@ import TICoordinatorKit
 
 protocol MainScreenModule: Presentable {
     var onOpenPhotoPicker: ParameterClosure<PhotoPickerParameters>? { get set }
+    var onOpenEditor: ParameterClosure<Photo>? { get set }
 }
 
 enum MainScreenModuleAssembly {

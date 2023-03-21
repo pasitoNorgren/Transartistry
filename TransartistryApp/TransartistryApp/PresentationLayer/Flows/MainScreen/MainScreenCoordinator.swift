@@ -22,6 +22,10 @@ final class MainScreenCoordinator: BaseCoordinator {
             self?.startPhotoPickerModule(with: $0)
         }
         
+        module.onOpenEditor = { [weak self] in
+            self?.startEditorFlow(with: $0)
+        }
+        
         router.push(module)
     }
     
@@ -45,5 +49,12 @@ final class MainScreenCoordinator: BaseCoordinator {
         }
         
         router.present(module)
+    }
+    
+    private func startEditorFlow(with photo: Photo) {
+        let editorConfiguration = EditorConfiguration(photo: photo)
+        
+        let coordinator = EditorCoordinator(router: router)
+        bindTo(coordinator).start(with: editorConfiguration)
     }
 }
