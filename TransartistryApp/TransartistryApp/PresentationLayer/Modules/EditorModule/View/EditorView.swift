@@ -1,0 +1,1 @@
+final class EditorView: BaseView {}
