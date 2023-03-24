@@ -15,13 +15,13 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.navigationBar.isHidden = true
+        hideNavigationController()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        navigationController?.navigationBar.isHidden = false
+        showNavigationController()
     }
     
     override func bindComponents() {

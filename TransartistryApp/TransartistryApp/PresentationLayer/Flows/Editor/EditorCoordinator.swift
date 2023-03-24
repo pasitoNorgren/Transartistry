@@ -21,6 +21,12 @@ final class EditorCoordinator: BaseCoordinator {
     private func startEditorModule(with configuration: EditorConfigurable) {
         
         let module = factory.makeEditorModule(configuration: configuration)
+        
+        module.onClose = { [weak self] in
+            self?.router.popModule()
+            self?.finishFlow()
+        }
+        
         router.push(module)
     }
 }
