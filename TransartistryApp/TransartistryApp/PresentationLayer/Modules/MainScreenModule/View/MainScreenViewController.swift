@@ -10,11 +10,18 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
     // MARK: - MainScreenModule
     
     var onOpenPhotoPicker: ParameterClosure<PhotoPickerParameters>?
+    var onOpenEditor: ParameterClosure<Photo>?
     
-    override func configureAppearance() {
-        super.configureAppearance()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        navigationController?.navigationBar.isHidden = true
+        hideNavigationController()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        showNavigationController()
     }
     
     override func bindComponents() {
@@ -60,6 +67,12 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
             .observe(on: MainScheduler.instance)
             .map { _ in Void() }
             .subscribe(customView.rx.orientationHandler)
+            .disposed(by: disposeBag)
+        
+        viewModel.photoSenderDriver
+            .drive(with: self, onNext: { owner, photo in
+                owner.onOpenEditor?(photo)
+            })
             .disposed(by: disposeBag)
     }
 }

@@ -44,6 +44,24 @@
 		5848C885298977B40055AD99 /* Constants+BasicInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C884298977B40055AD99 /* Constants+BasicInsets.swift */; };
 		5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C887298978B60055AD99 /* Constants+Radius.swift */; };
 		5848C88A298979470055AD99 /* Constants+Heights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5848C889298979470055AD99 /* Constants+Heights.swift */; };
+		58621BA329C9FF0A005C514C /* EditorModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BA229C9FF0A005C514C /* EditorModuleAssembly.swift */; };
+		58621BA629CA008C005C514C /* EditorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BA529CA008C005C514C /* EditorCoordinator.swift */; };
+		58621BA829CA01A7005C514C /* EditorFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BA729CA01A7005C514C /* EditorFlowFactory.swift */; };
+		58621BAA29CA11C7005C514C /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BA929CA11C7005C514C /* EditorViewModel.swift */; };
+		58621BAC29CA1224005C514C /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BAB29CA1224005C514C /* EditorViewController.swift */; };
+		58621BAE29CA1251005C514C /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BAD29CA1251005C514C /* EditorView.swift */; };
+		58621BB029CA13C0005C514C /* EditorViewModelOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BAF29CA13C0005C514C /* EditorViewModelOutlets.swift */; };
+		58621BB229CA2C41005C514C /* PhotoSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BB129CA2C41005C514C /* PhotoSender.swift */; };
+		58621BB529CA3490005C514C /* EditorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BB429CA3490005C514C /* EditorConfiguration.swift */; };
+		58621BB729CBB1F1005C514C /* UIViewController+NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BB629CBB1F1005C514C /* UIViewController+NavigationItem.swift */; };
+		58621BBE29CCF3CD005C514C /* BarButtonItemActionObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BBD29CCF3CD005C514C /* BarButtonItemActionObserving.swift */; };
+		58621BC029CCF406005C514C /* LeftBarButtonItemActionObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BBF29CCF406005C514C /* LeftBarButtonItemActionObserving.swift */; };
+		58621BC229CCF43C005C514C /* LeftBarButtonItemActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BC129CCF43C005C514C /* LeftBarButtonItemActionHandling.swift */; };
+		58621BC529CCF5BA005C514C /* BackBarButtonItemActionHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BC429CCF5BA005C514C /* BackBarButtonItemActionHandling.swift */; };
+		58621BC829CCF8EA005C514C /* BarButtonItemSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BC729CCF8EA005C514C /* BarButtonItemSetting.swift */; };
+		58621BCB29CCF939005C514C /* LeftBarButtonItemSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BCA29CCF939005C514C /* LeftBarButtonItemSetting.swift */; };
+		58621BCE29CCFA0B005C514C /* RoundedBackBarButtonItemSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BCD29CCFA0B005C514C /* RoundedBackBarButtonItemSetting.swift */; };
+		58621BD029CE1CA9005C514C /* UIViewController+NavVCHiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58621BCF29CE1CA8005C514C /* UIViewController+NavVCHiding.swift */; };
 		5891905B2785196F00868307 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5891905D2785196F00868307 /* Localizable.strings */; };
 		58AAD965299564840072B764 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD964299564840072B764 /* Photo.swift */; };
 		58AAD967299598790072B764 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD966299598790072B764 /* UIImage+Data.swift */; };
@@ -134,6 +152,24 @@
 		5848C884298977B40055AD99 /* Constants+BasicInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+BasicInsets.swift"; sourceTree = "<group>"; };
 		5848C887298978B60055AD99 /* Constants+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Radius.swift"; sourceTree = "<group>"; };
 		5848C889298979470055AD99 /* Constants+Heights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Heights.swift"; sourceTree = "<group>"; };
+		58621BA229C9FF0A005C514C /* EditorModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModuleAssembly.swift; sourceTree = "<group>"; };
+		58621BA529CA008C005C514C /* EditorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCoordinator.swift; sourceTree = "<group>"; };
+		58621BA729CA01A7005C514C /* EditorFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorFlowFactory.swift; sourceTree = "<group>"; };
+		58621BA929CA11C7005C514C /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
+		58621BAB29CA1224005C514C /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		58621BAD29CA1251005C514C /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		58621BAF29CA13C0005C514C /* EditorViewModelOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModelOutlets.swift; sourceTree = "<group>"; };
+		58621BB129CA2C41005C514C /* PhotoSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSender.swift; sourceTree = "<group>"; };
+		58621BB429CA3490005C514C /* EditorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorConfiguration.swift; sourceTree = "<group>"; };
+		58621BB629CBB1F1005C514C /* UIViewController+NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationItem.swift"; sourceTree = "<group>"; };
+		58621BBD29CCF3CD005C514C /* BarButtonItemActionObserving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemActionObserving.swift; sourceTree = "<group>"; };
+		58621BBF29CCF406005C514C /* LeftBarButtonItemActionObserving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemActionObserving.swift; sourceTree = "<group>"; };
+		58621BC129CCF43C005C514C /* LeftBarButtonItemActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemActionHandling.swift; sourceTree = "<group>"; };
+		58621BC429CCF5BA005C514C /* BackBarButtonItemActionHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackBarButtonItemActionHandling.swift; sourceTree = "<group>"; };
+		58621BC729CCF8EA005C514C /* BarButtonItemSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItemSetting.swift; sourceTree = "<group>"; };
+		58621BCA29CCF939005C514C /* LeftBarButtonItemSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftBarButtonItemSetting.swift; sourceTree = "<group>"; };
+		58621BCD29CCFA0B005C514C /* RoundedBackBarButtonItemSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackBarButtonItemSetting.swift; sourceTree = "<group>"; };
+		58621BCF29CE1CA8005C514C /* UIViewController+NavVCHiding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavVCHiding.swift"; sourceTree = "<group>"; };
 		5891905C2785196F00868307 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5891906D278799DA00868307 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		58AAD964299564840072B764 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -345,6 +381,7 @@
 		5848C84E2985A1260055AD99 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				58621BA429CA007A005C514C /* Editor */,
 				5818BA40298B042E0080F8EB /* PhotoPicker */,
 				5848C8512985A1500055AD99 /* MainScreen */,
 			);
@@ -363,6 +400,7 @@
 		5848C8542985A2580055AD99 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				58621B9E29C9FEB5005C514C /* EditorModule */,
 				5848C8552985A2630055AD99 /* MainScreenModule */,
 				5818BA39298B039B0080F8EB /* PhotoPickerModule */,
 			);
@@ -477,9 +515,126 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		58621B9E29C9FEB5005C514C /* EditorModule */ = {
+			isa = PBXGroup;
+			children = (
+				58621BB329CA347F005C514C /* Model */,
+				58621B9F29C9FED4005C514C /* Assembly */,
+				58621BA129C9FEE4005C514C /* View */,
+				58621BA029C9FEDE005C514C /* ViewModel */,
+			);
+			path = EditorModule;
+			sourceTree = "<group>";
+		};
+		58621B9F29C9FED4005C514C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				58621BA229C9FF0A005C514C /* EditorModuleAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		58621BA029C9FEDE005C514C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				58621BA929CA11C7005C514C /* EditorViewModel.swift */,
+				58621BAF29CA13C0005C514C /* EditorViewModelOutlets.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		58621BA129C9FEE4005C514C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58621BAB29CA1224005C514C /* EditorViewController.swift */,
+				58621BAD29CA1251005C514C /* EditorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58621BA429CA007A005C514C /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				58621BA529CA008C005C514C /* EditorCoordinator.swift */,
+				58621BA729CA01A7005C514C /* EditorFlowFactory.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		58621BB329CA347F005C514C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58621BB429CA3490005C514C /* EditorConfiguration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58621BBA29CCF367005C514C /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				58621BBB29CCF37A005C514C /* UIBarButtonItem+Extensions */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		58621BBB29CCF37A005C514C /* UIBarButtonItem+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				58621BC629CCF8D3005C514C /* UIBarButtonItem+Setting */,
+				58621BBC29CCF3B4005C514C /* UIBarButtonItem+Actions */,
+			);
+			path = "UIBarButtonItem+Extensions";
+			sourceTree = "<group>";
+		};
+		58621BBC29CCF3B4005C514C /* UIBarButtonItem+Actions */ = {
+			isa = PBXGroup;
+			children = (
+				58621BC329CCF4C8005C514C /* LeftBarButtonItem */,
+				58621BBD29CCF3CD005C514C /* BarButtonItemActionObserving.swift */,
+				58621BC429CCF5BA005C514C /* BackBarButtonItemActionHandling.swift */,
+			);
+			path = "UIBarButtonItem+Actions";
+			sourceTree = "<group>";
+		};
+		58621BC329CCF4C8005C514C /* LeftBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				58621BC129CCF43C005C514C /* LeftBarButtonItemActionHandling.swift */,
+				58621BBF29CCF406005C514C /* LeftBarButtonItemActionObserving.swift */,
+			);
+			path = LeftBarButtonItem;
+			sourceTree = "<group>";
+		};
+		58621BC629CCF8D3005C514C /* UIBarButtonItem+Setting */ = {
+			isa = PBXGroup;
+			children = (
+				58621BCC29CCF9FC005C514C /* RoundedBackBarButtonItem */,
+				58621BC929CCF927005C514C /* LeftBarButtonItemSetting */,
+				58621BC729CCF8EA005C514C /* BarButtonItemSetting.swift */,
+			);
+			path = "UIBarButtonItem+Setting";
+			sourceTree = "<group>";
+		};
+		58621BC929CCF927005C514C /* LeftBarButtonItemSetting */ = {
+			isa = PBXGroup;
+			children = (
+				58621BCA29CCF939005C514C /* LeftBarButtonItemSetting.swift */,
+			);
+			path = LeftBarButtonItemSetting;
+			sourceTree = "<group>";
+		};
+		58621BCC29CCF9FC005C514C /* RoundedBackBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				58621BCD29CCFA0B005C514C /* RoundedBackBarButtonItemSetting.swift */,
+			);
+			path = RoundedBackBarButtonItem;
+			sourceTree = "<group>";
+		};
 		589190502784BEFB00868307 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				58621BBA29CCF367005C514C /* UIBarButtonItem */,
 				58D48718299FF62E006908E8 /* UIViewController */,
 				5818BA312989BFE40080F8EB /* UIStackView */,
 				5848C8802988843B0055AD99 /* UIColor */,
@@ -518,6 +673,7 @@
 				58AE4A15299A877800755611 /* PhotoPickerManager.swift */,
 				58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */,
 				58D4871F29A12F88006908E8 /* PhotoResultPresentable.swift */,
+				58621BB129CA2C41005C514C /* PhotoSender.swift */,
 			);
 			path = Photo;
 			sourceTree = "<group>";
@@ -567,6 +723,8 @@
 			children = (
 				58D48719299FF660006908E8 /* UIViewController+Alert.swift */,
 				58FC57A929A410A0000DB358 /* UIViewController+Orientation.swift */,
+				58621BB629CBB1F1005C514C /* UIViewController+NavigationItem.swift */,
+				58621BCF29CE1CA8005C514C /* UIViewController+NavVCHiding.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -914,42 +1072,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				582B64F2298187E9004D76EB /* ViewModelOutlets.swift in Sources */,
+				58621BA329C9FF0A005C514C /* EditorModuleAssembly.swift in Sources */,
 				5848C87D298880FF0055AD99 /* String+Localizing.swift in Sources */,
 				5818BA3F298B04240080F8EB /* PhotoPickerModuleAssembly.swift in Sources */,
 				58D4871A299FF660006908E8 /* UIViewController+Alert.swift in Sources */,
 				5848C87F2988817B0055AD99 /* String+Shortcuts.swift in Sources */,
 				5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */,
+				58621BC229CCF43C005C514C /* LeftBarButtonItemActionHandling.swift in Sources */,
 				58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */,
 				5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */,
 				582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */,
 				5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */,
 				5848C88A298979470055AD99 /* Constants+Heights.swift in Sources */,
 				58AAD965299564840072B764 /* Photo.swift in Sources */,
+				58621BAC29CA1224005C514C /* EditorViewController.swift in Sources */,
 				5818BA42298B044A0080F8EB /* PhotoPickerFlowFactory.swift in Sources */,
+				58621BA829CA01A7005C514C /* EditorFlowFactory.swift in Sources */,
 				5848C885298977B40055AD99 /* Constants+BasicInsets.swift in Sources */,
 				580A3AC42985758600A8981D /* ApplicationCoordinator.swift in Sources */,
 				58D48713299EE335006908E8 /* AlertActionStyle.swift in Sources */,
+				58621BC529CCF5BA005C514C /* BackBarButtonItemActionHandling.swift in Sources */,
 				58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */,
 				58D4871E29A12B0C006908E8 /* MainScreenActivityIndicating.swift in Sources */,
 				5848C86E29883EF70055AD99 /* UIView+SafeArea.swift in Sources */,
 				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
+				58621BB229CA2C41005C514C /* PhotoSender.swift in Sources */,
+				58621BA629CA008C005C514C /* EditorCoordinator.swift in Sources */,
 				5848C85A2985AB0D0055AD99 /* MainScreenModuleAssembly.swift in Sources */,
 				58F34D26278228B3004D33AC /* AppDelegate.swift in Sources */,
 				582B64F92981E1EF004D76EB /* BaseCustomViewController.swift in Sources */,
 				5848C8532985A1660055AD99 /* MainScreenCoordinator.swift in Sources */,
+				58621BAA29CA11C7005C514C /* EditorViewModel.swift in Sources */,
 				58D48710299EE151006908E8 /* AlertStyle.swift in Sources */,
 				582B64F0298181FF004D76EB /* ViewModelConfigurable.swift in Sources */,
 				58AAD967299598790072B764 /* UIImage+Data.swift in Sources */,
+				58621BC829CCF8EA005C514C /* BarButtonItemSetting.swift in Sources */,
 				58D4872029A12F88006908E8 /* PhotoResultPresentable.swift in Sources */,
 				582B64F429818B03004D76EB /* BaseViewController.swift in Sources */,
 				5818BA3D298B04110080F8EB /* PhotoPickerController.swift in Sources */,
 				580A3AC02985754300A8981D /* ApplicationRouter.swift in Sources */,
+				58621BB029CA13C0005C514C /* EditorViewModelOutlets.swift in Sources */,
 				5848C85C2985AC980055AD99 /* MainScreenViewModel.swift in Sources */,
 				5848C864298816350055AD99 /* WrapperView.swift in Sources */,
 				582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */,
+				58621BB729CBB1F1005C514C /* UIViewController+NavigationItem.swift in Sources */,
 				5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */,
 				58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */,
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
+				58621BBE29CCF3CD005C514C /* BarButtonItemActionObserving.swift in Sources */,
 				58FC57AA29A410A0000DB358 /* UIViewController+Orientation.swift in Sources */,
 				58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */,
 				5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */,
@@ -957,18 +1127,24 @@
 				58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */,
 				58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */,
 				5848C882298884510055AD99 /* UIColor+Palette.swift in Sources */,
+				58621BC029CCF406005C514C /* LeftBarButtonItemActionObserving.swift in Sources */,
 				5848C872298867860055AD99 /* UIFont+Weights.swift in Sources */,
+				58621BCB29CCF939005C514C /* LeftBarButtonItemSetting.swift in Sources */,
 				5848C875298869090055AD99 /* NSAttributedString+Extension.swift in Sources */,
 				58D48715299EE4CD006908E8 /* AlertAction.swift in Sources */,
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
+				58621BCE29CCFA0B005C514C /* RoundedBackBarButtonItemSetting.swift in Sources */,
+				58621BB529CA3490005C514C /* EditorConfiguration.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
 				5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */,
 				5848C86C29881C430055AD99 /* UIImage+Sources.swift in Sources */,
 				5818BA362989C6FE0080F8EB /* Closures.swift in Sources */,
 				5848C8622985AEA60055AD99 /* MainScreenFlowFactory.swift in Sources */,
 				5848C86929881B3A0055AD99 /* UIView+SubviewsAdding.swift in Sources */,
+				58621BD029CE1CA9005C514C /* UIViewController+NavVCHiding.swift in Sources */,
+				58621BAE29CA1251005C514C /* EditorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

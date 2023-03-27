@@ -11,6 +11,7 @@ final class MainScreenViewModel: BaseViewModel,
     private let animationActivityDistributor = Distributor<Bool>()
     private let interactionActivityDistributor = Distributor<Bool>()
     private let alertPresentationDistributor = Distributor<AlertDescription>()
+    private let photoSenderDistributor = Distributor<Photo>()
     
     private var lastPickedSourceType: PhotoPickerSource = .camera
     private var onRepickPhoto: VoidClosure?
@@ -20,6 +21,10 @@ final class MainScreenViewModel: BaseViewModel,
     var disposeBag = DisposeBag()
     
     // MARK: - MainScreenViewModelOutlets
+    
+    var photoSenderDriver: Driver<Photo> {
+        photoSenderDistributor.distributionDriver
+    }
     
     var alertPresentationDriver: Driver<AlertDescription> {
         alertPresentationDistributor.distributionDriver
@@ -76,9 +81,8 @@ final class MainScreenViewModel: BaseViewModel,
         trackIndicatingActvity(false)
         
         switch result {
-        case .success:
-            // handle success case later
-            return
+        case .success(let photo):
+            handlePhotoPickingResult(with: photo)
             
         case .failure(let error):
             handlePhotoPickingResult(error: error)
@@ -104,6 +108,10 @@ final class MainScreenViewModel: BaseViewModel,
         }
         
         alertPresentationDistributor.publish(item: alertDescription)
+    }
+    
+    private func handlePhotoPickingResult(with photo: Photo) {
+        photoSenderDistributor.publish(item: photo)
     }
 }
 

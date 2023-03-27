@@ -1,4 +1,5 @@
 protocol MainScreenViewModelOutlets: ViewModelOutlets,
                                      PhotoPicking,
                                      MainScreenActivityIndicating,
-                                     AlertPresentable {}
+                                     AlertPresentable,
+                                     PhotoSender {}
