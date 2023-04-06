@@ -66,6 +66,17 @@
 		58AAD965299564840072B764 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD964299564840072B764 /* Photo.swift */; };
 		58AAD967299598790072B764 /* UIImage+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD966299598790072B764 /* UIImage+Data.swift */; };
 		58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AAD9692996771A0072B764 /* PhotoDistributor.swift */; };
+		58ADB7A129D7854C00731A3F /* BaseImageCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7A029D7854C00731A3F /* BaseImageCanvas.swift */; };
+		58ADB7A329D785B800731A3F /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7A229D785B800731A3F /* ConfigurableView.swift */; };
+		58ADB7B829DC9C5700731A3F /* LifeCycleOutlets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7B729DC9C5700731A3F /* LifeCycleOutlets.swift */; };
+		58ADB7BE29DF35E400731A3F /* Data+Converting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7BD29DF35E400731A3F /* Data+Converting.swift */; };
+		58ADB7C129DF42C200731A3F /* EditorImageCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7C029DF42C200731A3F /* EditorImageCanvas.swift */; };
+		58ADB7C429DF452600731A3F /* EditorCanvasConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7C329DF452600731A3F /* EditorCanvasConfiguration.swift */; };
+		58ADB7C729DF4DC200731A3F /* PKCanvasView+ImageCanvasConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7C629DF4DC200731A3F /* PKCanvasView+ImageCanvasConfig.swift */; };
+		58ADB7C929DF4E4F00731A3F /* ImageCanvasConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7C829DF4E4F00731A3F /* ImageCanvasConfigurable.swift */; };
+		58ADB7CC29DF4EA600731A3F /* InkingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7CB29DF4EA600731A3F /* InkingTool.swift */; };
+		58ADB7CE29DF4EBA00731A3F /* InkTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7CD29DF4EBA00731A3F /* InkTypeModel.swift */; };
+		58ADB7D029DF4EE500731A3F /* InkColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ADB7CF29DF4EE500731A3F /* InkColor.swift */; };
 		58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A15299A877800755611 /* PhotoPickerManager.swift */; };
 		58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */; };
 		58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4870D299EDE90006908E8 /* AlertDescription.swift */; };
@@ -175,6 +186,17 @@
 		58AAD964299564840072B764 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		58AAD966299598790072B764 /* UIImage+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Data.swift"; sourceTree = "<group>"; };
 		58AAD9692996771A0072B764 /* PhotoDistributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDistributor.swift; sourceTree = "<group>"; };
+		58ADB7A029D7854C00731A3F /* BaseImageCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageCanvas.swift; sourceTree = "<group>"; };
+		58ADB7A229D785B800731A3F /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		58ADB7B729DC9C5700731A3F /* LifeCycleOutlets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCycleOutlets.swift; sourceTree = "<group>"; };
+		58ADB7BD29DF35E400731A3F /* Data+Converting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Converting.swift"; sourceTree = "<group>"; };
+		58ADB7C029DF42C200731A3F /* EditorImageCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorImageCanvas.swift; sourceTree = "<group>"; };
+		58ADB7C329DF452600731A3F /* EditorCanvasConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorCanvasConfiguration.swift; sourceTree = "<group>"; };
+		58ADB7C629DF4DC200731A3F /* PKCanvasView+ImageCanvasConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PKCanvasView+ImageCanvasConfig.swift"; sourceTree = "<group>"; };
+		58ADB7C829DF4E4F00731A3F /* ImageCanvasConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCanvasConfigurable.swift; sourceTree = "<group>"; };
+		58ADB7CB29DF4EA600731A3F /* InkingTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkingTool.swift; sourceTree = "<group>"; };
+		58ADB7CD29DF4EBA00731A3F /* InkTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkTypeModel.swift; sourceTree = "<group>"; };
+		58ADB7CF29DF4EE500731A3F /* InkColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkColor.swift; sourceTree = "<group>"; };
 		58AE4A15299A877800755611 /* PhotoPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManager.swift; sourceTree = "<group>"; };
 		58AE4A17299A88C900755611 /* PhotoPickerParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerParameters.swift; sourceTree = "<group>"; };
 		58D4870D299EDE90006908E8 /* AlertDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDescription.swift; sourceTree = "<group>"; };
@@ -347,6 +369,8 @@
 				582B64F1298187E9004D76EB /* ViewModelOutlets.swift */,
 				5848C84C29859E780055AD99 /* DisposeBagHolder.swift */,
 				5818BA43298BE6E20080F8EB /* BaseModule.swift */,
+				58ADB7A229D785B800731A3F /* ConfigurableView.swift */,
+				58ADB7B729DC9C5700731A3F /* LifeCycleOutlets.swift */,
 			);
 			path = BaseProtocols;
 			sourceTree = "<group>";
@@ -537,6 +561,7 @@
 		58621BA029C9FEDE005C514C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				58ADB7C229DF451900731A3F /* Models */,
 				58621BA929CA11C7005C514C /* EditorViewModel.swift */,
 				58621BAF29CA13C0005C514C /* EditorViewModelOutlets.swift */,
 			);
@@ -546,6 +571,7 @@
 		58621BA129C9FEE4005C514C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				58ADB7BF29DF42B000731A3F /* Subviews */,
 				58621BAB29CA1224005C514C /* EditorViewController.swift */,
 				58621BAD29CA1251005C514C /* EditorView.swift */,
 			);
@@ -634,6 +660,8 @@
 		589190502784BEFB00868307 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				58ADB7C529DF4DB300731A3F /* PKCanvasView */,
+				58ADB7BC29DF35D200731A3F /* Data */,
 				58621BBA29CCF367005C514C /* UIBarButtonItem */,
 				58D48718299FF62E006908E8 /* UIViewController */,
 				5818BA312989BFE40080F8EB /* UIStackView */,
@@ -658,6 +686,7 @@
 		58AAD9632995646E0072B764 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				58ADB79F29D7853800731A3F /* Canvas */,
 				58D4870C299E886C006908E8 /* Alert */,
 				58D7A357299A9FA30004BB74 /* Distributor */,
 				58AAD968299676F70072B764 /* Photo */,
@@ -676,6 +705,58 @@
 				58621BB129CA2C41005C514C /* PhotoSender.swift */,
 			);
 			path = Photo;
+			sourceTree = "<group>";
+		};
+		58ADB79F29D7853800731A3F /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				58ADB7CA29DF4E9D00731A3F /* InkingTool */,
+				58ADB7A029D7854C00731A3F /* BaseImageCanvas.swift */,
+				58ADB7C829DF4E4F00731A3F /* ImageCanvasConfigurable.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		58ADB7BC29DF35D200731A3F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				58ADB7BD29DF35E400731A3F /* Data+Converting.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		58ADB7BF29DF42B000731A3F /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				58ADB7C029DF42C200731A3F /* EditorImageCanvas.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		58ADB7C229DF451900731A3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58ADB7C329DF452600731A3F /* EditorCanvasConfiguration.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58ADB7C529DF4DB300731A3F /* PKCanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				58ADB7C629DF4DC200731A3F /* PKCanvasView+ImageCanvasConfig.swift */,
+			);
+			path = PKCanvasView;
+			sourceTree = "<group>";
+		};
+		58ADB7CA29DF4E9D00731A3F /* InkingTool */ = {
+			isa = PBXGroup;
+			children = (
+				58ADB7CB29DF4EA600731A3F /* InkingTool.swift */,
+				58ADB7CD29DF4EBA00731A3F /* InkTypeModel.swift */,
+				58ADB7CF29DF4EE500731A3F /* InkColor.swift */,
+			);
+			path = InkingTool;
 			sourceTree = "<group>";
 		};
 		58C12DD82782367200D9BB12 /* Supporting Files */ = {
@@ -1079,9 +1160,11 @@
 				5848C87F2988817B0055AD99 /* String+Shortcuts.swift in Sources */,
 				5818BA332989BFFF0080F8EB /* UIStackView+Subviews.swift in Sources */,
 				58621BC229CCF43C005C514C /* LeftBarButtonItemActionHandling.swift in Sources */,
+				58ADB7C129DF42C200731A3F /* EditorImageCanvas.swift in Sources */,
 				58D7A359299A9FAE0004BB74 /* Distributor.swift in Sources */,
 				5848C888298978B60055AD99 /* Constants+Radius.swift in Sources */,
 				582B64E6298062C1004D76EB /* ViewLayerConfigurable.swift in Sources */,
+				58ADB7C929DF4E4F00731A3F /* ImageCanvasConfigurable.swift in Sources */,
 				5848C8602985ACE80055AD99 /* MainScreenView.swift in Sources */,
 				5848C88A298979470055AD99 /* Constants+Heights.swift in Sources */,
 				58AAD965299564840072B764 /* Photo.swift in Sources */,
@@ -1093,8 +1176,10 @@
 				58D48713299EE335006908E8 /* AlertActionStyle.swift in Sources */,
 				58621BC529CCF5BA005C514C /* BackBarButtonItemActionHandling.swift in Sources */,
 				58D4871C299FFA60006908E8 /* AlertPresentable.swift in Sources */,
+				58ADB7C729DF4DC200731A3F /* PKCanvasView+ImageCanvasConfig.swift in Sources */,
 				58D4871E29A12B0C006908E8 /* MainScreenActivityIndicating.swift in Sources */,
 				5848C86E29883EF70055AD99 /* UIView+SafeArea.swift in Sources */,
+				58ADB7B829DC9C5700731A3F /* LifeCycleOutlets.swift in Sources */,
 				582B64F72981BF4A004D76EB /* BaseConfigurableViewController.swift in Sources */,
 				58621BB229CA2C41005C514C /* PhotoSender.swift in Sources */,
 				58621BA629CA008C005C514C /* EditorCoordinator.swift in Sources */,
@@ -1116,33 +1201,40 @@
 				5848C864298816350055AD99 /* WrapperView.swift in Sources */,
 				582B64ED298181C8004D76EB /* BaseViewModel.swift in Sources */,
 				58621BB729CBB1F1005C514C /* UIViewController+NavigationItem.swift in Sources */,
+				58ADB7C429DF452600731A3F /* EditorCanvasConfiguration.swift in Sources */,
 				5848C84D29859E780055AD99 /* DisposeBagHolder.swift in Sources */,
 				58AE4A16299A877800755611 /* PhotoPickerManager.swift in Sources */,
 				582B64EB29817DFC004D76EB /* BaseView.swift in Sources */,
 				58621BBE29CCF3CD005C514C /* BarButtonItemActionObserving.swift in Sources */,
+				58ADB7A329D785B800731A3F /* ConfigurableView.swift in Sources */,
 				58FC57AA29A410A0000DB358 /* UIViewController+Orientation.swift in Sources */,
 				58AE4A18299A88C900755611 /* PhotoPickerParameters.swift in Sources */,
 				5818BA44298BE6E20080F8EB /* BaseModule.swift in Sources */,
 				58D48717299EE851006908E8 /* AlertFactory.swift in Sources */,
 				58AAD96A2996771A0072B764 /* PhotoDistributor.swift in Sources */,
 				58E8667D299D3D9D00591CCE /* UIColor+Random.swift in Sources */,
+				58ADB7A129D7854C00731A3F /* BaseImageCanvas.swift in Sources */,
 				5848C882298884510055AD99 /* UIColor+Palette.swift in Sources */,
 				58621BC029CCF406005C514C /* LeftBarButtonItemActionObserving.swift in Sources */,
 				5848C872298867860055AD99 /* UIFont+Weights.swift in Sources */,
 				58621BCB29CCF939005C514C /* LeftBarButtonItemSetting.swift in Sources */,
 				5848C875298869090055AD99 /* NSAttributedString+Extension.swift in Sources */,
+				58ADB7CC29DF4EA600731A3F /* InkingTool.swift in Sources */,
 				58D48715299EE4CD006908E8 /* AlertAction.swift in Sources */,
 				582B64E42980622E004D76EB /* Bindable.swift in Sources */,
 				58D4870E299EDE90006908E8 /* AlertDescription.swift in Sources */,
+				58ADB7BE29DF35E400731A3F /* Data+Converting.swift in Sources */,
 				58F34D28278228B3004D33AC /* SceneDelegate.swift in Sources */,
 				58621BCE29CCFA0B005C514C /* RoundedBackBarButtonItemSetting.swift in Sources */,
 				58621BB529CA3490005C514C /* EditorConfiguration.swift in Sources */,
 				5848C85E2985ACDB0055AD99 /* MainScreenViewController.swift in Sources */,
 				5818BA382989CFE50080F8EB /* MainScreenViewModelOutlets.swift in Sources */,
 				5848C86C29881C430055AD99 /* UIImage+Sources.swift in Sources */,
+				58ADB7CE29DF4EBA00731A3F /* InkTypeModel.swift in Sources */,
 				5818BA362989C6FE0080F8EB /* Closures.swift in Sources */,
 				5848C8622985AEA60055AD99 /* MainScreenFlowFactory.swift in Sources */,
 				5848C86929881B3A0055AD99 /* UIView+SubviewsAdding.swift in Sources */,
+				58ADB7D029DF4EE500731A3F /* InkColor.swift in Sources */,
 				58621BD029CE1CA9005C514C /* UIViewController+NavVCHiding.swift in Sources */,
 				58621BAE29CA1251005C514C /* EditorView.swift in Sources */,
 			);
