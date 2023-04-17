@@ -11,7 +11,7 @@ final class MainScreenViewModel: BaseViewModel,
     private let animationActivityDistributor = Distributor<Bool>()
     private let interactionActivityDistributor = Distributor<Bool>()
     private let alertPresentationDistributor = Distributor<AlertDescription>()
-    private let photoSenderDistributor = Distributor<Photo>()
+    private let photoSenderDistributor = Distributor<Photo?>()
     
     private var lastPickedSourceType: PhotoPickerSource = .camera
     private var onRepickPhoto: VoidClosure?
@@ -22,7 +22,7 @@ final class MainScreenViewModel: BaseViewModel,
     
     // MARK: - MainScreenViewModelOutlets
     
-    var photoSenderDriver: Driver<Photo> {
+    var photoSenderDriver: Driver<Photo?> {
         photoSenderDistributor.distributionDriver
     }
     
@@ -112,6 +112,13 @@ final class MainScreenViewModel: BaseViewModel,
     
     private func handlePhotoPickingResult(with photo: Photo) {
         photoSenderDistributor.publish(item: photo)
+        
+        resetValuesContainedByDrivers()
+    }
+    
+    private func resetValuesContainedByDrivers() {
+        photoPickerManager.resetSubscriptionResult() // not to contain Photo in Result<> success case in driver
+        photoSenderDistributor.publish(item: nil) // not to contain Photo in driver
     }
 }
 

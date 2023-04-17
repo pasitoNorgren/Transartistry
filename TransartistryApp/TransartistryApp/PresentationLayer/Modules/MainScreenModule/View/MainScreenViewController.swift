@@ -71,6 +71,10 @@ final class MainScreenViewController<VM: MainScreenViewModelOutlets>: BaseCustom
         
         viewModel.photoSenderDriver
             .drive(with: self, onNext: { owner, photo in
+                
+                // compactMap is not a thing here if needed to empty driver's last value
+                guard let photo = photo else { return }
+                
                 owner.onOpenEditor?(photo)
             })
             .disposed(by: disposeBag)

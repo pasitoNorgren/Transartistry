@@ -44,6 +44,10 @@ class PhotoPickerManager: BaseViewModel, DisposeBagHolder, PhotoPicking, PhotoRe
             .disposed(by: disposeBag)
     }
     
+    func resetSubscriptionResult() {
+        photoDistributor.publish(item: .failure(.void))
+    }
+    
     private func openPhotoPicker(source: PhotoPickerSource) {
         photoPickerRelay.accept((photoDistributor, source))
     }
